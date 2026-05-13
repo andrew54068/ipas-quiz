@@ -46,12 +46,12 @@ No build step, no server required. State persists in `localStorage`.
 │       ├── past-exam.pdf
 │       ├── study-guide.pdf
 │       └── progress.json
-├── shared/
-│   ├── sample-questions.pdf    # 114年9月版 樣題 (covers all 3 subjects)
-│   └── images/                 # Reference figures used by image-based questions
-└── notes/
-    └── score-tracker-s1.md     # Hand-written score notes from early test-prep sessions
+└── shared/
+    ├── sample-questions.pdf    # 114年9月版 樣題 (covers all 3 subjects)
+    └── images/                 # Reference figures used by image-based questions
 ```
+
+> Personal study notes (e.g. per-round score trackers) live under `notes/` locally, but `notes/` is gitignored so nothing personal lands in the public repo. Each visitor's quiz progress is kept in their own browser's `localStorage` — never sent anywhere.
 
 ## Deploy to Vercel
 

@@ -11,3 +11,7 @@ quiz-pool-combined.json
 
 # Vercel CLI metadata (generated when running `vercel` or `vercel link`)
 .vercel/
+
+# Personal notes (per-user score trackers, hand-written reflections)
+# Kept local only; never pushed to a public repo.
+notes/

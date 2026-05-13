@@ -8,3 +8,6 @@
 # Sidecar / temp files
 *.tmp
 quiz-pool-combined.json
+
+# Vercel CLI metadata (generated when running `vercel` or `vercel link`)
+.vercel/

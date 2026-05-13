@@ -1,0 +1,1314 @@
+{
+  "version": 1,
+  "test_name": "iPAS AI 應用規劃師中級 科目三 機器學習技術與應用",
+  "subject_code": "s3",
+  "subject_short": "機器學習",
+  "source_files": [
+    "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+    "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf"
+  ],
+  "verified_question_pool": [
+    {
+      "id": "exam-s3-114-2-q1",
+      "topic": "Training/Validation",
+      "question_text": "某零售企業建立一個銷售預測模型,希望評估該模型在不同月份的新資料上,是否仍能維持穩定的預測表現。資料科學團隊計畫利用統計方法檢驗模型對未觀察資料的適應能力與泛化效果。下列哪一種方法最適合用於此目的?",
+      "options": {
+        "A": "F 檢定(F-test)",
+        "B": "交叉驗證(Cross-Validation)",
+        "C": "配對樣本 t 檢定(Paired-sample t-test)",
+        "D": "卡方檢定(Chi-square Test)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'B' for question 1"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 交叉驗證(K-fold、Time-series CV 等)是評估模型對「未見資料」泛化能力的標準做法,藉由多次劃分訓練/驗證集獲得穩定的效能估計。\n\n**其他選項為何錯:**\n- A. F 檢定是檢驗多組平均數差異或變異數比較。\n- B. ✓ 正解\n- C. 配對 t 檢定比較兩組相依樣本的平均差,非泛化評估方法。\n- D. 卡方檢定處理類別變數獨立性。\n\n**記憶要點:** 泛化能力評估 → Cross-Validation。"
+    },
+    {
+      "id": "exam-s3-114-2-q2",
+      "topic": "DL/Optimization",
+      "question_text": "在建立迴歸或分類模型時,若希望避免模型過度擬合(Overfitting),可透過加入正則化項以限制模型的複雜度。其中,L1 正則化(Lasso)的主要效果為何?",
+      "options": {
+        "A": "增加模型參數的數量,以提升表現靈活度",
+        "B": "強化梯度穩定性,避免參數更新過度震盪",
+        "C": "產生稀疏模型(Sparse Model),使部分參數權重收斂為零",
+        "D": "提高學習率(Learning Rate),加速模型收斂速度"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'C' for question 2"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** L1 正則化在損失函數中加入 |w| 之和,其幾何上的菱形約束容易把部分權重恰好壓至 0,產生稀疏解,具備特徵選擇效果。\n\n**其他選項為何錯:**\n- A. 正則化是「抑制」複雜度,不是增加參數。\n- B. 那較接近 batch normalization 或梯度裁剪的功能。\n- C. ✓ 正解\n- D. 學習率調整不是正則化作用。\n\n**記憶要點:** L1 = Lasso = 稀疏化(部分權重歸零);L2 = Ridge = 平滑縮小。"
+    },
+    {
+      "id": "exam-s3-114-2-q3",
+      "topic": "Math/Optimization",
+      "question_text": "在訓練非線性模型時,若目標函數為非凸函數(Non-convex Function),演算法在參數更新過程中可能出現多個極值點,導致最佳化結果不穩定。請問此時最可能發生下列哪一種情況?",
+      "options": {
+        "A": "梯度消失",
+        "B": "資料過少",
+        "C": "局部最優解",
+        "D": "過擬合"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'C' for question 3"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 非凸函數有多個局部極小值,梯度下降可能停在局部最優而非全域最優,造成最佳化結果不穩定。\n\n**其他選項為何錯:**\n- A. 梯度消失是激活函數飽和導致的問題,與凸性無關。\n- B. 資料量問題與最佳化幾何性無關。\n- C. ✓ 正解\n- D. 過擬合是泛化問題,不是「最佳化卡住」的問題。\n\n**記憶要點:** 非凸 → 容易陷入局部最優;改善方法:多次重啟、Momentum、Adam、學習率排程。"
+    },
+    {
+      "id": "exam-s3-114-2-q4",
+      "topic": "ML/Algorithms",
+      "question_text": "在執行 DBSCAN(Density-Based Spatial Clustering of Applications with Noise)群集分析時,若某資料點鄰域內的樣本數不足以形成核心點(Core Point),且該點未被任何核心點的鄰域所包含,也未與其他群形成密度可達關係(Density Reachability),此資料點最終將被歸類為哪一種類型?",
+      "options": {
+        "A": "鄰近點(Neighbor Point)",
+        "B": "雜訊點(Noise Point)",
+        "C": "邊界點(Border Point)",
+        "D": "潛在點(Potential Point)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'B' for question 4"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** DBSCAN 中,既不是 Core Point 也不在任何 Core Point 鄰域內的點,被判定為 Noise Point(雜訊點)。\n\n**其他選項為何錯:**\n- A. 「鄰近點」非 DBSCAN 標準術語。\n- B. ✓ 正解\n- C. Border Point 是「不是 core,但落在 core 的 ε 鄰域內」— 題目明確排除這種情況。\n- D. 「潛在點」非 DBSCAN 標準術語。\n\n**記憶要點:** DBSCAN 三類點:Core / Border / Noise。"
+    },
+    {
+      "id": "exam-s3-114-2-q5",
+      "topic": "DL/CNN",
+      "question_text": "某智慧製造公司開發一套影像辨識系統,用於自動檢測生產線上的瑕疵產品。系統採用卷積神經網路(Convolutional Neural Network, CNN)作為主要模型架構,其中第一層卷積層(Convolutional Layer)主要負責的功能為下列何者?",
+      "options": {
+        "A": "自動提取輸入影像中的局部特徵",
+        "B": "降低影像維度以加速運算效率",
+        "C": "增加神經元與參數數量以提升模型容量",
+        "D": "整合所有特徵並輸出最終分類結果"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'A' for question 5"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** CNN 第一層卷積層通常以小卷積核掃描影像,自動抽取「邊緣、紋理、角點」等低階局部特徵;隨網路加深,特徵會逐步抽象化。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 降維是池化層(Pooling)的工作。\n- C. 與卷積層特定功能無關。\n- D. 分類是最末端的全連接層/softmax。\n\n**記憶要點:** Conv 抽特徵;Pool 降維;FC 分類。"
+    },
+    {
+      "id": "exam-s3-114-2-q6",
+      "topic": "DL/CNN",
+      "question_text": "某智慧城市團隊開發一套交通監控系統,用於即時辨識路口監視器影像中的車輛與行人。團隊比較後發現,卷積神經網路(Convolutional Neural Network, CNN)在訓練與推論效率上,明顯優於傳統的全連接神經網路(Fully Connected Neural Network, FCNN)。請問下列何者為主要原因?",
+      "options": {
+        "A": "CNN 能自動學習影像的旋轉與比例不變性",
+        "B": "CNN 可直接跳過人工特徵提取步驟進行分類",
+        "C": "CNN 透過區域感知(Local Receptive Field)與參數共享(Parameter Sharing)機制,降低模型參數量與運算複雜度",
+        "D": "CNN 捨棄激勵函數(Activation Function),以加快運算速度"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'C' for question 6"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** CNN 相對 FCNN 的核心優勢:每個神經元只看局部區域(Local Receptive Field)且卷積核權重共享(Parameter Sharing),大幅減少參數數量與運算量。\n\n**其他選項為何錯:**\n- A. CNN 不天生具有完全的旋轉/比例不變性,需依賴資料增強。\n- B. FCNN 也不需要人工特徵提取,這不是 CNN 獨有優勢。\n- C. ✓ 正解\n- D. CNN 仍使用激活函數(如 ReLU)。\n\n**記憶要點:** CNN 核心:Local Receptive Field + Parameter Sharing → 少參數、可擴規模。"
+    },
+    {
+      "id": "exam-s3-114-2-q7",
+      "topic": "DL/RNN",
+      "question_text": "下列哪一種應用最適合採用長短期記憶網路(Long Short-Term Memory, LSTM)模型?",
+      "options": {
+        "A": "預測未來七天的電力需求變化趨勢",
+        "B": "辨識監視影像中不同類別的物件",
+        "C": "將大量顧客資料依相似特徵自動分群",
+        "D": "將高維度的感測器資料壓縮成低維表示"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'A' for question 7"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** LSTM 設計用來處理「序列、時間相依」資料的長期依賴問題,電力需求預測屬於典型的時間序列任務。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 物件辨識用 CNN 系列(YOLO、Faster R-CNN)。\n- C. 自動分群用 K-means、DBSCAN 等。\n- D. 降維用 PCA、Autoencoder。\n\n**記憶要點:** 序列/時間相依 → LSTM/GRU/Transformer。"
+    },
+    {
+      "id": "exam-s3-114-2-q8",
+      "topic": "ML/Algorithms",
+      "question_text": "資訊增益(Information Gain)常用於衡量特徵對分類結果的不確定性貢獻程度,並據以進行特徵選擇。此方法主要應用於下列哪一類模型架構中?",
+      "options": {
+        "A": "使用 L1 正則化進行特徵篩選的線性模型",
+        "B": "利用激活函數(Activation Function)進行特徵擷取的深度神經網路",
+        "C": "透過核函數(Kernel Function)將特徵映射至高維空間的分類模型",
+        "D": "透過遞迴分裂方式建立分類規則的決策樹模型"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'D' for question 8"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** Information Gain(及其延伸 IG Ratio、Gini)是決策樹(ID3、C4.5)選擇分裂屬性的標準,衡量該屬性對減少資訊熵的貢獻。\n\n**其他選項為何錯:**\n- A. L1 正則化是另一種特徵選擇機制,但其本身不基於資訊增益。\n- B. 深度網路不使用資訊增益做特徵擷取。\n- C. 核方法(SVM)依賴核函數,非資訊增益。\n- D. ✓ 正解\n\n**記憶要點:** Information Gain 是決策樹的核心分裂準則。"
+    },
+    {
+      "id": "exam-s3-114-2-q9",
+      "topic": "Feature/Engineering",
+      "question_text": "在建構以距離為基礎的機器學習模型(如 KNN、SVM)時,下列哪一項資料前處理方式最為關鍵?",
+      "options": {
+        "A": "進行特徵縮放(Feature Scaling),使各特徵變數具有相似的數值範圍",
+        "B": "將連續型特徵變數轉換為類別型變數",
+        "C": "以平均值或中位數進行缺失值補齊",
+        "D": "進行隨機抽樣以平衡資料筆數"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'A' for question 9"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** KNN、SVM(以及 K-means、PCA 等)的距離度量會被特徵尺度大幅影響;不縮放會讓量級大的特徵主導距離,導致模型失真。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 連續轉類別會喪失精細資訊。\n- C. 缺值補齊雖重要,但不是「距離型模型」特有最關鍵步驟。\n- D. 抽樣與距離模型本身關鍵性無關。\n\n**記憶要點:** 距離 / 內積為基礎的模型 → 一定先做 Feature Scaling。"
+    },
+    {
+      "id": "exam-s3-114-2-q10",
+      "topic": "Training/Tuning",
+      "question_text": "下列哪一種應用情境最適合導入 AutoML,以提升模型開發效率?",
+      "options": {
+        "A": "公司已有完整的 MLOps 平台與資深資料科學團隊,模型更新採固定流程",
+        "B": "製造部門的生產良率模型已長期穩定運作,只需定期調整參數",
+        "C": "行銷部門希望在短時間內比較多種顧客流失預測模型,缺乏專職工程師與時間進行手動建模",
+        "D": "財務部門正在開發高度客製化的信用風險評估模型,需要精細控制特徵工程與演算法細節"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'C' for question 10"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** AutoML 的價值在於「自動化模型挑選與超參數搜尋」,最適用於團隊缺乏 ML 專家、需要快速嘗試多種模型的場景。\n\n**其他選項為何錯:**\n- A. 已有資深團隊與固定流程,AutoML 邊際效益小。\n- B. 已長期穩定,只需微調,不需 AutoML。\n- C. ✓ 正解\n- D. 高度客製需要細部控制,AutoML 反而限制了靈活性。\n\n**記憶要點:** AutoML 適合:時間緊、人力不足、需要嘗試多模型的中度標準化任務。"
+    },
+    {
+      "id": "exam-s3-114-2-q11",
+      "topic": "Training/Tuning",
+      "question_text": "相較於 Grid Search,Random Search 在超參數調整上具備哪一項主要優勢?",
+      "options": {
+        "A": "可自動產生模型架構",
+        "B": "可使用更大的訓練集",
+        "C": "避免模型過擬合",
+        "D": "能更有效率搜尋高維參數空間"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'D' for question 11"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** Bergstra & Bengio 證明,在高維超參數空間中,Random Search 比 Grid Search 用相同預算可以更廣泛地探索重要維度(因為 Grid 受維度詛咒影響嚴重)。\n\n**其他選項為何錯:**\n- A. 模型架構自動產生屬於 NAS / AutoML。\n- B. 與資料量無關。\n- C. 兩者都不直接防止過擬合。\n- D. ✓ 正解\n\n**記憶要點:** 高維調參 → Random Search 通常比 Grid Search 高效。"
+    },
+    {
+      "id": "exam-s3-114-2-q12",
+      "topic": "Math/Optimization",
+      "question_text": "某智慧製造公司開發一套設備故障預測系統,利用感測器資料訓練深度神經網路(Deep Neural Network, DNN)模型,以提前偵測異常運轉跡象。在訓練過程中,團隊發現模型收斂速度不穩定:有時太快導致過擬合,有時又遲遲無法達到最佳準確率。開發團隊可以藉由調整下列哪一項超參數(Hyperparameter)以改善此問題?",
+      "options": {
+        "A": "每個神經元的輸出結果",
+        "B": "損失函數(Loss Function)在訓練過程中的梯度變化值(Gradient)",
+        "C": "學習率(Learning Rate),控制模型權重更新的速度",
+        "D": "模型在訓練後產生的權重值"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'C' for question 12"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 學習率是控制權重每次更新步幅的「超參數」,過大會震盪/過擬合,過小會收斂緩慢 — 正符合題目描述,可透過調整 LR 或使用 LR Scheduler 改善。\n\n**其他選項為何錯:**\n- A. 神經元輸出是訓練過程的「結果」,不是調控的超參數。\n- B. 梯度值是訓練計算出的中間量,不是超參數。\n- C. ✓ 正解\n- D. 訓練後的權重是輸出,不是調的對象。\n\n**記憶要點:** 收斂震盪 / 過快 → 調 Learning Rate(超參數)。"
+    },
+    {
+      "id": "exam-s3-114-2-q13",
+      "topic": "Bias/Fairness",
+      "question_text": "標籤偏差(Label Bias)通常是因為什麼原因造成?",
+      "options": {
+        "A": "訓練資料量過大",
+        "B": "標記資料本身帶有主觀偏見",
+        "C": "模型結構設計不當",
+        "D": "特徵數量設定過多"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'B' for question 13"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Label Bias 指人工標註過程中,標記者的主觀傾向、文化背景或標註指南偏差,使標籤本身不客觀(如種族、性別偏見內化進標籤)。\n\n**其他選項為何錯:**\n- A. 資料量大小不直接造成標籤偏差。\n- B. ✓ 正解\n- C. 模型結構導致的是 inductive bias,不是 label bias。\n- D. 特徵數量是特徵問題,非標籤。\n\n**記憶要點:** Label Bias = 標註者的主觀偏見內化進資料。"
+    },
+    {
+      "id": "exam-s3-114-2-q14",
+      "topic": "Privacy/Compliance",
+      "question_text": "下列哪一種 AI 應用情境中,模型的可解釋性(Explainability)最為關鍵?",
+      "options": {
+        "A": "電商平台利用深度學習模型預測用戶的下一次購買時間,以優化推播行銷策略",
+        "B": "新創公司使用機器學習演算法自動調整廣告出價策略,以提升點擊轉換率",
+        "C": "醫院導入 AI 模型分析病患影像並給出腫瘤惡性可能性,作為臨床醫師診斷依據",
+        "D": "銀行導入 AI 模型預測客戶流失率,並自動推薦留客優惠方案"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'C' for question 14"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 醫療診斷直接影響生命健康,醫師需要理解模型輸出根據才能負責任地下判斷,且受法規與倫理高度監督,Explainability 最為關鍵。\n\n**其他選項為何錯:**\n- A. 商業預測,風險較低。\n- B. 廣告出價,商業範疇。\n- C. ✓ 正解\n- D. 信用 / 行銷類,雖重要但風險與責任不及醫療。\n\n**記憶要點:** 高風險決策(醫療、司法、金融授信)→ 可解釋性最重要。"
+    },
+    {
+      "id": "exam-s3-114-2-q15",
+      "topic": "Eval/Metrics",
+      "question_text": "在線性迴歸模型中,若 R² 值為 0.85,其意義為何?",
+      "options": {
+        "A": "模型準確率為 85%",
+        "B": "85% 的變異可被模型解釋",
+        "C": "預測誤差為 15%",
+        "D": "模型有 85% 的信心水準"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'B' for question 15"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** R²(決定係數)= 1 − SSE/SST,代表模型解釋了多少比例的因變數變異;R²=0.85 表示 85% 的 Y 變異被自變數解釋。\n\n**其他選項為何錯:**\n- A. R² 不是分類「準確率」。\n- B. ✓ 正解\n- C. 1 − R² 是未解釋的變異比例,非「誤差率」。\n- D. 信心水準是信賴區間的概念,與 R² 無關。\n\n**記憶要點:** R² = 解釋變異比例;不是準確率、不是信心水準。"
+    },
+    {
+      "id": "exam-s3-114-2-q16",
+      "topic": "Eval/Metrics",
+      "question_text": "在二元分類問題中,若精確率(Precision)為 0.8,召回率(Recall)為 0.6,則 F1 分數(F1 Score)為何?",
+      "options": {
+        "A": "0.686",
+        "B": "0.700",
+        "C": "0.720",
+        "D": "0.750"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'A' for question 16"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** F1 = 2·P·R/(P+R) = 2·0.8·0.6/(0.8+0.6) = 0.96/1.4 ≈ 0.6857 ≈ 0.686。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 0.7 是算術平均 (0.8+0.6)/2,非調和平均。\n- C. 此值無對應計算。\n- D. 此值無對應計算。\n\n**記憶要點:** F1 = Precision 與 Recall 的調和平均;偏向較小者。"
+    },
+    {
+      "id": "exam-s3-114-2-q17",
+      "topic": "DL/Optimization",
+      "question_text": "下列哪一種優化演算法內建動量(Momentum)的設計機制?",
+      "options": {
+        "A": "SGD+Momentum",
+        "B": "Adam",
+        "C": "RMSProp",
+        "D": "Adagrad"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'B' for question 17"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Adam = Momentum + RMSProp,自帶一階動量(梯度的指數移動平均)與二階動量(梯度平方的指數移動平均)。題目問「內建」動量,Adam 是最完整代表。\n\n**其他選項為何錯:**\n- A. SGD+Momentum 是「外加」動量的變形,需顯式啟用;且選項本身名稱已帶 Momentum,不算「內建」。\n- B. ✓ 正解\n- C. RMSProp 只有二階動量(歷史梯度平方),沒有一階動量。\n- D. Adagrad 累積歷史梯度平方,沒有一階動量。\n\n**記憶要點:** Adam = Adaptive Moment Estimation,一二階動量都內建。"
+    },
+    {
+      "id": "exam-s3-114-2-q18",
+      "topic": "ML/Algorithms",
+      "question_text": "下列何者最能同時反映 XGBoost(eXtreme Gradient Boosting)相較於傳統梯度提升決策樹(Gradient Boosting Decision Tree, GBDT)的主要技術改進?",
+      "options": {
+        "A": "引入正則化項(Regularization)以抑制過擬合,並支援缺失值自動處理與並行化訓練",
+        "B": "改以隨機森林(Random Forest)架構取代樹模型以提升準確率",
+        "C": "以類神經網路(Neural Network)取代弱分類器(Weak Learners)",
+        "D": "採用批次正規化(Batch Normalization)技術提升模型穩定性"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'A' for question 18"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** XGBoost 相對 GBDT 的主要創新:在目標函數中加入 L1/L2 正則化、稀疏感知(自動處理缺失值)、並行化分裂節點搜尋、近似分裂演算法等,使模型既精準又能 scale。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. XGBoost 不是改用 Random Forest,仍是 Boosting。\n- C. 弱分類器仍是樹,不是神經網路。\n- D. Batch Norm 屬於深度學習領域,與 XGBoost 無關。\n\n**記憶要點:** XGBoost 賣點:Regularization + Sparsity-aware + Parallel split finding。"
+    },
+    {
+      "id": "exam-s3-114-2-q19",
+      "topic": "Eval/Metrics",
+      "question_text": "某醫療機構開發疾病早期偵測模型,正樣本(確診病例)僅佔 3%。在模型訓練與評估過程中,下列哪一種作法最不適合用於提升對少數類病例的預測能力?",
+      "options": {
+        "A": "使用 SMOTE 過採樣",
+        "B": "調整類別權重",
+        "C": "使用準確率(Accuracy)作為評估指標",
+        "D": "欠採樣多數類(Undersampling the majority class)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'C' for question 19"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 類別嚴重不平衡時,Accuracy 容易被多數類主導(全猜正常仍 97% 對),無法反映模型對少數類的偵測能力;應改用 Precision/Recall/F1/AUC 等。\n\n**其他選項為何錯:**\n- A. SMOTE 對少數類採樣有幫助。\n- B. 調整 class weight 能讓損失更重視少數類。\n- C. ✓ 正解(這是「最不適合」的選項)\n- D. 欠採樣多數類能平衡資料。\n\n**記憶要點:** 不平衡資料 → 改用 Precision/Recall/F1/AUC,而非 Accuracy。"
+    },
+    {
+      "id": "exam-s3-114-2-q20",
+      "topic": "Feature/Engineering",
+      "question_text": "某電子商務公司為開發商品評論情感分析模型,希望模型能捕捉評論中不同特徵之間的關聯影響,例如「商品價格」與「顧客滿意度」的互動效果。下列哪一種特徵工程設計方式最適合用於建立互動特徵(Interaction Features)?",
+      "options": {
+        "A": "將單一特徵取平方",
+        "B": "對所有特徵進行對數轉換",
+        "C": "將兩個或多個特徵進行乘積或交互組合",
+        "D": "對特徵進行標準化"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'C' for question 20"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 互動特徵的標準做法是把兩個(或多個)特徵相乘 / 相除 / 組合(如 x1·x2),使線性模型也能捕捉非線性互動效應。\n\n**其他選項為何錯:**\n- A. 取平方是單一特徵的非線性轉換,不涉及多特徵互動。\n- B. 對數轉換改變單一特徵分佈,非互動。\n- C. ✓ 正解\n- D. 標準化只是縮放,不是建構互動。\n\n**記憶要點:** Interaction Feature = 多特徵的乘積/交互組合。"
+    },
+    {
+      "id": "exam-s3-114-2-q21",
+      "topic": "DL/Transformer",
+      "question_text": "某語音辨識系統開發團隊採用 Transformer 架構,為了讓模型能同時理解語音片段中的發音特徵、語速變化與語意脈絡等多層次資訊,團隊在設計中導入了多頭注意力(Multi-head Attention)機制。請問下列何者為此機制的主要優點?",
+      "options": {
+        "A": "減少模型參數量以降低訓練成本",
+        "B": "加速整體注意力計算過程",
+        "C": "從不同表示子空間(Representation Subspaces)同時捕捉多樣化關聯資訊",
+        "D": "避免梯度消失(Gradient Vanishing)問題"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'C' for question 21"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 多頭注意力把 Q、K、V 投影到多個子空間中平行計算 attention,讓模型能同時關注不同類型的關係(如語法、語義、長距離依賴等)。\n\n**其他選項為何錯:**\n- A. 多頭反而會增加參數量。\n- B. 多頭並未加速,而是擴增表達能力。\n- C. ✓ 正解\n- D. 梯度消失主要靠殘差連接(Residual)解決,不是多頭注意力。\n\n**記憶要點:** Multi-head = 多個 attention 並行 + 不同 representation subspace。"
+    },
+    {
+      "id": "exam-s3-114-2-q22",
+      "topic": "Math/Probability",
+      "question_text": "某電商平台希望預測顧客是否會購買特定商品。系統蒐集顧客的瀏覽紀錄、停留時間、商品類別偏好與過去購買行為,並以此推估「在觀察到這些行為特徵的情況下,該顧客會購買的機率」。若模型採用貝氏定理(Bayes' Theorem)進行推論,下列敘述何者最符合其核心運作機制?",
+      "options": {
+        "A": "根據歷史樣本自動分群,找出行為相似的顧客群",
+        "B": "以條件機率方式計算顧客屬於「會購買」或「不會購買」的分類機率",
+        "C": "以最小平方誤差(Mean Squared Error)為損失函數,預測顧客的購買金額",
+        "D": "依據回饋信號(Feedback Signal)透過強化學習(Reinforcement Learning)動態調整推薦策略"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'B' for question 22"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 貝氏分類器以條件機率 P(類別 | 特徵) ∝ P(特徵 | 類別)·P(類別) 計算每個類別的後驗機率,正符合題述機制。\n\n**其他選項為何錯:**\n- A. 自動分群是非監督學習(K-means)。\n- B. ✓ 正解\n- C. MSE 損失搭配連續輸出,屬於迴歸,不是貝氏推論。\n- D. 強化學習屬於另一典範,非貝氏推論。\n\n**記憶要點:** Bayes 分類 = 計算每類條件機率,取最大者。"
+    },
+    {
+      "id": "exam-s3-114-2-q23",
+      "topic": "Math/Probability",
+      "question_text": "一家再生能源公司希望預測未來三個月太陽能發電量的波動範圍。由於氣候條件具有高度隨機性,且輸入變數(如日照時數、雲量、溫度)之間存在不確定關係,工程團隊決定以隨機抽樣方式模擬多種可能情境,以估算整體發電量的機率分佈與風險區間。請問此時所採用的技術最符合下列哪一種方法?",
+      "options": {
+        "A": "蒙地卡羅方法(Monte Carlo Method)",
+        "B": "K-means 聚類(K-means Clustering)",
+        "C": "支持向量迴歸(Support Vector Regression, SVR)",
+        "D": "特徵選取(Feature Selection)"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'A' for question 23"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** Monte Carlo 法透過大量隨機抽樣模擬輸入變數的不確定性,可估計目標量的分佈與風險區間,正適合題述場景。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. K-means 是分群,非情境模擬。\n- C. SVR 是迴歸模型,給出點預測而非機率分佈。\n- D. 特徵選取是前處理,不是模擬技術。\n\n**記憶要點:** 不確定情境模擬 + 機率分佈估計 → Monte Carlo。"
+    },
+    {
+      "id": "exam-s3-114-2-q24",
+      "topic": "Eval/Bias",
+      "question_text": "某房地產公司利用多元迴歸模型(Multiple Regression Model)預測房價,並繪製殘差圖(Residual Plot)檢查模型品質。結果顯示部分資料點的殘差極大,且在高價區樣本中出現系統性彎曲分佈現象。根據此觀察,下列何者為最可能的正確解釋?",
+      "options": {
+        "A": "模型過度擬合(Overfitting),導致在訓練資料上表現過好、泛化能力不足",
+        "B": "模型特徵數量不足,導致欠擬合(Underfitting)",
+        "C": "模型存在異常值(Outlier)或非線性關係,違反迴歸假設",
+        "D": "殘差圖呈現隨機分佈,表示模型已完全符合所有假設"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'C' for question 24"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 殘差圖出現「系統性彎曲」表示存在未被線性模型捕捉的非線性結構;極大殘差則暗示 outlier。兩者都違反線性迴歸的線性假設與常態誤差假設。\n\n**其他選項為何錯:**\n- A. 過擬合主要在訓練/驗證集表現差異上看,不直接由殘差彎曲判斷。\n- B. 欠擬合可能讓殘差有趨勢,但「殘差極大 + 高價區系統彎曲」更直接指向 outlier + 非線性。\n- C. ✓ 正解\n- D. 隨機分佈才表示假設成立;題目描述明確是系統性彎曲。\n\n**記憶要點:** 殘差圖看不到隨機分佈 → 模型假設失效;彎曲 = 非線性。"
+    },
+    {
+      "id": "exam-s3-114-2-q25",
+      "topic": "ML/Algorithms",
+      "question_text": "某金融機構正在建立傳統信用評分卡模型,採用邏輯迴歸(Logistic Regression)作為建模方法,並依循監理機關建議的標準化流程進行模型開發。下列哪一項不是傳統信用評分卡模型開發流程中的常見步驟?",
+      "options": {
+        "A": "使用生成式模型進行特徵學習",
+        "B": "進行特徵選擇與多重共線性(Multicollinearity)分析",
+        "C": "進行分箱(Binning)與資訊值(Information Value, IV)檢定",
+        "D": "使用樣本穩定性指標(Population Stability Index, PSI)檢驗模型穩定性"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'A' for question 25"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 傳統信用評分卡強調簡單可解釋、可審計,標準流程包含分箱、IV、WOE、邏輯迴歸、PSI 等;「生成式模型做特徵學習」不屬於傳統流程,也較難通過監理稽核。\n\n**其他選項為何錯:**\n- A. ✓ 正解(這是「不是」的選項)\n- B. 特徵選擇 + 共線性檢查是標準步驟。\n- C. Binning + IV 是評分卡核心做法。\n- D. PSI 是部署後監控的標準指標。\n\n**記憶要點:** 傳統評分卡標配:Binning + WOE + IV + Logistic Regression + PSI。"
+    },
+    {
+      "id": "exam-s3-114-2-q26",
+      "topic": "Modeling/Selection",
+      "question_text": "在防止監督式學習模型過擬合(Overfitting)時,下列哪一種策略不屬於降低模型複雜度或限制學習能力的作法?",
+      "options": {
+        "A": "採用 L1 或 L2 正則化",
+        "B": "在訓練過程中使用 Dropout 技術",
+        "C": "採取早期停止(Early Stopping)機制",
+        "D": "擴增輸入特徵變數以提升模型表達能力"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'D' for question 26"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 增加特徵會「提高」模型容量,反而更容易過擬合;這正與防止過擬合相反。\n\n**其他選項為何錯:**\n- A. L1/L2 正則化是經典的複雜度懲罰。\n- B. Dropout 隨機關閉神經元,限制學習能力。\n- C. Early Stopping 在驗證損失上升時停訓,避免過度配適。\n- D. ✓ 正解(這是「不屬於」的選項)\n\n**記憶要點:** 防止過擬合的常見手段:L1/L2、Dropout、Early Stopping、減少特徵 / 模型容量。"
+    },
+    {
+      "id": "exam-s3-114-2-q27",
+      "topic": "DL/Basics",
+      "question_text": "某智慧製造團隊在開發瑕疵影像檢測模型時,發現使用線性激活函數(Activation Function)後,模型的訓練準確率長期停滯,懷疑模型無法學習到足夠複雜的特徵表達。若要改善此問題,下列哪一項調整方案最為合適?",
+      "options": {
+        "A": "增加卷積層(Convolutional Layer)數量,使網路更深以強化特徵提取",
+        "B": "將輸入影像先進行灰階化處理,降低運算量",
+        "C": "使用 Sigmoid 激活函數,以將輸出壓縮至 [0,1] 範圍",
+        "D": "改用 ReLU(Rectified Linear Unit)激活函數,以引入非線性並提升模型表達能力"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'D' for question 27"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 線性激活的多層網路在數學上等同於單一線性轉換,無法學習非線性特徵;改用 ReLU(或其他非線性激活)即可賦予網路非線性表達能力,且 ReLU 計算高效、緩解梯度消失。\n\n**其他選項為何錯:**\n- A. 多堆線性層仍是線性,深度無助。\n- B. 灰階化降運算但不解決非線性表達問題。\n- C. Sigmoid 雖非線性,但深網中易梯度消失,且通常不用於隱藏層;不是最佳選擇。\n- D. ✓ 正解\n\n**記憶要點:** 深網要有非線性才能擬合複雜函數;隱藏層首選 ReLU。"
+    },
+    {
+      "id": "exam-s3-114-2-q28",
+      "topic": "Eval/Bias",
+      "question_text": "一家零售電商公司希望建立顧客流失預測模型,用以判斷哪些會員可能在三個月內不再消費。團隊以去年會員資料進行訓練,並採用「曾經購買三次以上」的活躍顧客紀錄作為樣本。模型上線後,對整體會員進行預測時,發現模型對於新註冊會員與低消費會員的預測準確率明顯偏低。下列何者為造成此現象最可能的原因?",
+      "options": {
+        "A": "特徵設計未排除與會員忠誠度高度相關的變數,導致特徵偏差(Feature Bias)",
+        "B": "標記(Label)由人工標註,導致標籤偏差(Label Bias)",
+        "C": "訓練樣本僅涵蓋高活躍顧客,造成取樣偏差(Sampling Bias)",
+        "D": "模型未進行超參數調整,導致過擬合(Overfitting)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'C' for question 28"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 訓練資料只取「曾購買三次以上」這群高活躍顧客,部署時遇到新註冊或低消費會員(分佈不同),模型自然表現差 — 這是典型 Sampling Bias / Selection Bias。\n\n**其他選項為何錯:**\n- A. 特徵偏差描述的是特徵設計問題,題目核心是樣本取得方式。\n- B. 沒提到人工標註,且流失與否的標籤通常是事實。\n- C. ✓ 正解\n- D. 過擬合是訓練/驗證表現差,題目強調的是分佈差異。\n\n**記憶要點:** 訓練取樣只涵蓋特定群體 → Sampling Bias / Selection Bias。"
+    },
+    {
+      "id": "exam-s3-114-2-q29",
+      "topic": "Training/Validation",
+      "question_text": "在工業設備故障預測專案中,模型訓練與超參數調整均依賴於一段歷史數據作為驗證集。然而,隨著設備運行環境與工況條件的變化,原有驗證集已無法充分反映現況,導致模型在實際部署後的預測準確率逐漸下降。下列哪一種策略最能有效提升模型在長期運行環境中的穩定性與泛化能力?",
+      "options": {
+        "A": "固定驗證集內容,並透過模型正則化技巧(如 L2 正則化)強化模型泛化",
+        "B": "將全部歷史資料納入訓練,不使用驗證集,依靠早期停止(Early Stopping)控制訓練",
+        "C": "簡化模型架構,減少模型參數數量以降低過擬合風險",
+        "D": "採用時間序列交叉驗證(Time Series Cross Validation)或滑動視窗驗證(Rolling Window Validation)方法,動態更新驗證資料以適應時間演進"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'D' for question 29"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 時間序列 CV / Rolling Window 能讓驗證集隨時間滾動,反映最新分佈,有效應對 Concept Drift,符合長期運行需求。\n\n**其他選項為何錯:**\n- A. 固定驗證集無法追上分佈演變。\n- B. 沒驗證集 + 只靠 Early Stopping 仍無法應對 drift。\n- C. 簡化模型不解決時間漂移。\n- D. ✓ 正解\n\n**記憶要點:** 概念漂移(Concept Drift)+ 時間序列 → Time Series CV / Rolling Window。"
+    },
+    {
+      "id": "exam-s3-114-2-q30",
+      "topic": "Eval/Metrics",
+      "question_text": "某情感分析模型在英文資料集上取得 macro F1-score = 0.91。當該模型部署至西班牙文資料集時,F1-score 驟降至 0.58。下列哪一項解釋最合理,且與 F1-score 變化相關?",
+      "options": {
+        "A": "macro F1-score 本身波動性高,建議改用 micro-average F1-score 評估",
+        "B": "模型在西班牙文語料上過度擬合,導致評估結果偏高",
+        "C": "語言轉移造成召回率(Recall)下降,模型無法正確辨識關鍵情緒詞彙",
+        "D": "以均方誤差(MSE)取代 F1-score 評估可獲得更準確的結果"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'C' for question 30"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 跨語言轉移(English → Spanish)時,模型對新語言的情緒詞彙覆蓋不足,導致 Recall 下降;F1 = 2PR/(P+R) 對 Recall 變化敏感,自然驟降。\n\n**其他選項為何錯:**\n- A. macro vs micro 並非分數驟降的根本原因。\n- B. 過擬合會使表現偏好,但驟降不是過擬合的表現。\n- C. ✓ 正解\n- D. MSE 是迴歸指標,不適用分類。\n\n**記憶要點:** 跨域 / 跨語言 → Recall 通常先掉 → F1 隨之大降。"
+    },
+    {
+      "id": "exam-s3-114-2-q31",
+      "topic": "Modeling/Selection",
+      "question_text": "某能源公司利用歷史氣象與用電資料,開發長期電力需求預測模型,採用深度神經網路架構進行訓練。在訓練過程中,模型在訓練集上的損失值持續下降,但在驗證集上,損失在第 80 輪後開始波動,呈現週期性上升與下降。團隊懷疑模型受到季節性資料波動與隨機噪音影響,導致驗證損失難以穩定收斂。若要在此情境下合理運用早期停止法(Early Stopping)以確保模型具最佳泛化能力,下列哪一項策略最為適當?",
+      "options": {
+        "A": "直接根據訓練集損失最低點停止訓練,以確保模型充分擬合所有樣本",
+        "B": "監控驗證集損失並設定適度的耐心值(Patience),在連續多輪未改善後再停止訓練",
+        "C": "改以測試集損失作為早停依據,以提升模型最終評估一致性",
+        "D": "將所有資料重新合併後訓練至收斂,避免因資料分割導致評估波動"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'B' for question 31"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 標準 Early Stopping 流程:監控「驗證集」損失,設定 patience(如 10 epochs)避免短期震盪誤判停止;這正好應對題述驗證損失波動的情況。\n\n**其他選項為何錯:**\n- A. 訓練損失持續下降是過擬合徵兆,不能作為停止依據。\n- B. ✓ 正解\n- C. 測試集只能用於最終評估,不能參與訓練決策,否則造成資訊洩漏。\n- D. 合併資料無法評估泛化能力。\n\n**記憶要點:** Early Stopping = 監控 Validation Loss + Patience。"
+    },
+    {
+      "id": "exam-s3-114-2-q32",
+      "topic": "Feature/Selection",
+      "question_text": "某電信公司開發客戶流失預測模型,使用大量顧客行為特徵,例如通話時長、上網頻率、帳單金額、客服聯絡次數等。在訓練過程中,團隊發現部分特徵彼此高度相關,但同時也懷疑有些特徵對流失預測的貢獻有限。若希望模型在避免過擬合(Overfitting)的同時,能自動篩選出較具代表性的特徵,採用下列哪一種方法最為合適?",
+      "options": {
+        "A": "使用早期停止法(Early Stopping)控制訓練回合數,避免過擬合",
+        "B": "同時移除多重共線性特徵並採用 L2 正則化(Ridge),以確保模型穩定收斂",
+        "C": "僅使用 L2 正則化(Ridge),抑制所有權重幅度但保留全部特徵",
+        "D": "採用 L1 正則化(Lasso),透過懲罰項使部分特徵係數縮為 0"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'D' for question 32"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** L1 正則化(Lasso)的稀疏性會把不重要特徵的權重壓為 0,自動完成特徵選擇,同時抑制過擬合 — 完全對應題目「自動篩選有代表性特徵」需求。\n\n**其他選項為何錯:**\n- A. Early Stopping 只控制訓練輪數,不做特徵選擇。\n- B. 手動移除共線性 + L2 雖可,但「自動篩選」上 L1 更直接。\n- C. L2 不會把權重壓到 0,保留全部特徵。\n- D. ✓ 正解\n\n**記憶要點:** 自動特徵選擇 → Lasso (L1);只想穩定縮小權重 → Ridge (L2)。"
+    },
+    {
+      "id": "exam-s3-114-2-q33",
+      "topic": "ML/Algorithms",
+      "question_text": "某資料科學團隊正在開發一個客戶相似度比對系統,用於計算所有客戶之間的相似分數。若系統需逐一比對每一位客戶與其他所有客戶的資料組合,此時演算法的時間複雜度最可能為哪一種?其代表意義為何?",
+      "options": {
+        "A": "O(n) — 執行時間與資料量成線性關係",
+        "B": "O(n²) — 執行時間與資料量平方成正比",
+        "C": "O(1) — 執行時間固定不變",
+        "D": "O(log n) — 執行時間與資料數呈對數成長關係"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'B' for question 33"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 兩兩比對 n 個客戶,需要 C(n,2) ≈ n²/2 次計算,屬於 O(n²) 平方時間複雜度。\n\n**其他選項為何錯:**\n- A. O(n) 為線性,僅單次掃描。\n- B. ✓ 正解\n- C. O(1) 為常數時間,不隨資料量變化。\n- D. O(log n) 是二分搜尋或平衡樹查詢。\n\n**記憶要點:** All-pairs 比較 → O(n²);可用近似(LSH、聚類索引)降到接近 O(n log n)。"
+    },
+    {
+      "id": "exam-s3-114-2-q34",
+      "topic": "Training/Validation",
+      "question_text": "某醫療人工智慧團隊正在開發心臟病風險預測模型,資料量僅有 150 筆,其中陽性個案不到 8%。由於樣本稀少且類別分布極不平衡,團隊希望在有限資料下,仍能準確評估模型在不同資料上的表現穩定性,同時避免訓練資料被過度切分而影響模型效能。若團隊希望在有限樣本下,同時兼顧資料的利用率與各類別在驗證折中的比例一致性,最適合採用下列哪一種交叉驗證方法?",
+      "options": {
+        "A": "5-Fold 交叉驗證(5-Fold Cross Validation)",
+        "B": "留一法交叉驗證(Leave-One-Out Cross Validation)",
+        "C": "隨機交叉驗證(Random Cross Validation)",
+        "D": "分層留一法交叉驗證(Stratified Leave-One-Out Cross Validation)"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'D' for question 34"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 樣本極少(150 筆) + 嚴重不平衡(< 8% 陽性),需要 (1) 最大化資料利用率 → LOOCV(訓練用 N−1)、(2) 維持類別比例 → Stratified;兩者結合即 Stratified LOOCV,最符合需求。\n\n**其他選項為何錯:**\n- A. 5-fold 資料利用率較低,小樣本下每折更不穩。\n- B. 一般 LOOCV 不保證類別比例。\n- C. 「隨機」會把少數陽性樣本亂分佈。\n- D. ✓ 正解\n\n**記憶要點:** 小樣本 + 不平衡 → Stratified LOOCV。"
+    },
+    {
+      "id": "exam-s3-114-2-q35",
+      "topic": "Feature/Engineering",
+      "question_text": "某公司針對製程感測器資料進行主成分分析(PCA),經標準化與協方差矩陣分解後,得到三個主成分的特徵值如下:λ₁=6.0,λ₂=3.0,λ₃=1.0。若團隊決定僅保留能解釋至少 80% 總變量的主成分,以進行後續模型建構,下列哪一項敘述最合理且數據解讀正確?",
+      "options": {
+        "A": "前兩個主成分合計解釋 90% 的總變量,因此可安全降維至二維,且仍保留大部分資訊",
+        "B": "第一主成分解釋 60% 的變量,表示資料結構呈現明顯線性關係,僅保留一維即可避免過擬合",
+        "C": "雖然前兩個主成分可解釋超過 80% 變量,但第二主成分仍貢獻高達 30%,不宜捨棄第三主成分",
+        "D": "三個特徵值相差不大,顯示各主成分變異均勻,降維可能導致資料損失"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'A' for question 35"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 總變量 = 6+3+1 = 10;前兩個主成分 = (6+3)/10 = 90%,超過 80% 門檻,降至 2 維是合理選擇。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 第一主成分解釋 6/10 = 60%,但「線性結構」推論過頭;且只保一維會犧牲 40% 變異。\n- C. 第二主成分貢獻 30%,但前兩個合計 90%,捨第三是合理的(只損失 10%)。\n- D. λ₁=6 與 λ₃=1 差六倍,並非均勻。\n\n**記憶要點:** PCA 累積解釋變異 = Σλ_i / Σλ_total;通常取累積 ≥ 80%~95%。"
+    },
+    {
+      "id": "exam-s3-114-2-q36",
+      "topic": "Privacy/Compliance",
+      "question_text": "某銀行計畫與多家合作機構共同訓練一個 AI 信用風險預測模型,為避免客戶交易資料在傳輸與運算過程中外洩,技術團隊評估使用同態加密(Homomorphic Encryption)技術。下列何者最能正確描述同態加密在此應用中的關鍵特性?",
+      "options": {
+        "A": "系統以隨機雜訊(Noise)干擾輸出,確保統計結果不洩漏個資",
+        "B": "各參與銀行透過安全通道交換私鑰,確保模型參數一致",
+        "C": "將原始資料壓縮並同時加密,以減少加密後資料量與運算時間",
+        "D": "資料在加密狀態下仍可進行數值運算,模型訓練可於未解密資料上完成"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'D' for question 36"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 同態加密的核心特性就是「密文上可運算 + 解密後等同明文運算結果」,讓多方協作時不需互相分享明文資料即可訓練模型。\n\n**其他選項為何錯:**\n- A. 加噪聲是差分隱私(Differential Privacy)。\n- B. 私鑰交換並非同態加密本身的特性。\n- C. 同態加密通常會「擴大」資料量與運算時間,不是壓縮。\n- D. ✓ 正解\n\n**記憶要點:** Homomorphic Encryption = 密文可算;Differential Privacy = 加雜訊。"
+    },
+    {
+      "id": "exam-s3-114-2-q37",
+      "topic": "Privacy/Compliance",
+      "question_text": "某跨銀行風控平台希望整合多家銀行的用戶行為資料,用於訓練信用風險預測模型。由於競爭與法規限制,各銀行僅願意提供加密後資料,且資料在任何時間不得被平台解密。同時,平台需建立安全通訊協議以確保資料在傳輸過程未被竄改或重放。下列哪一組技術最能完整對應上述需求?",
+      "options": {
+        "A": "對稱加密(Symmetric Encryption) + 單向雜湊(Hash Function) + 非對稱加密(Asymmetric Encryption) + 差分隱私(Differential Privacy)",
+        "B": "同態加密(Homomorphic Encryption) + 非對稱加密(Asymmetric Encryption) + 單向雜湊(One-way Hash Function) + 對稱加密(Symmetric Encryption)",
+        "C": "差分隱私(Differential Privacy) + 對稱加密(Symmetric Encryption) + 同態加密(Homomorphic Encryption) + 數位簽章(Digital Signature)",
+        "D": "同態加密(Homomorphic Encryption) + 安全多方計算(Secure Multi-party Computation, MPC) + 雜湊函數(Hash Function) + 對稱加密(Symmetric Encryption)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 37"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 需求拆解:(1) 加密狀態仍能訓練 → 同態加密;(2) 安全金鑰交換 → 非對稱加密(公私鑰);(3) 傳輸完整性(防竄改、重放) → 單向雜湊(訊息摘要);(4) 大量資料加密效率 → 對稱加密。B 完整對應這四項。\n\n**其他選項為何錯:**\n- A. 沒有同態加密,無法在加密狀態下訓練。\n- B. ✓ 正解\n- C. 沒有非對稱加密(金鑰交換)組件較弱。\n- D. MPC 雖能達類似目的但題目強調的是「加密後資料」,且缺非對稱加密。\n\n**記憶要點:** 加密訓練 + 金鑰交換 + 完整性 + 高效加密 = HE + Asymmetric + Hash + Symmetric。"
+    },
+    {
+      "id": "exam-s3-114-2-q38",
+      "topic": "Eval/Metrics",
+      "question_text": "[此題包含附圖:Python 程式碼]\n\n```python\ndef metric(y_true, y_pred):\n    return sum((y_true - y_pred) ** 2) / len(y_true)\n```\n\n附圖程式碼所計算的是哪一類型的評估指標?",
+      "options": {
+        "A": "MAE",
+        "B": "MSE",
+        "C": "RMSE",
+        "D": "R²"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 38"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 程式碼計算 Σ(y_true − y_pred)² / N,正是均方誤差(Mean Squared Error, MSE)的定義。\n\n**其他選項為何錯:**\n- A. MAE 用絕對值 |y_true − y_pred|,不是平方。\n- B. ✓ 正解\n- C. RMSE 是 MSE 再開根號,程式碼沒有 sqrt。\n- D. R² 公式涉及 SSE 與 SST 的比值,結構完全不同。\n\n**記憶要點:** 平方/N → MSE;再開根 → RMSE;絕對值/N → MAE。"
+    },
+    {
+      "id": "exam-s3-114-2-q39",
+      "topic": "DL/Optimization",
+      "question_text": "[此題包含附圖:Python 程式碼]\n\n```python\ndef forward(x, p, training=True):\n    if training:\n        mask = np.random.binomial(1, p, size=x.shape)\n        return x * mask / p\n    else:\n        return x\n```\n\n附圖程式碼實現的是哪一種正則化技術?",
+      "options": {
+        "A": "L1 正則化",
+        "B": "L2 正則化",
+        "C": "Dropout",
+        "D": "Batch Normalization"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'C' for question 39"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 訓練時隨機產生 0/1 mask(Bernoulli)並乘上輸入,再除以 p(inverted dropout 的縮放補償);測試時直接回傳輸入 — 完全是 Dropout 的標準實作。\n\n**其他選項為何錯:**\n- A. L1 是在 loss 加 |w|,與隨機 mask 無關。\n- B. L2 是在 loss 加 w²,亦無關。\n- C. ✓ 正解\n- D. Batch Norm 是按 batch 標準化激活值,結構完全不同。\n\n**記憶要點:** 隨機關閉神經元 + 訓練/推論不同行為 = Dropout(inverted dropout 除以 p)。"
+    },
+    {
+      "id": "exam-s3-114-2-q40",
+      "topic": "Math/LinAlg",
+      "question_text": "依據附圖程式碼進行資料處理,下列何者正確?\n\n```python\nimport numpy as np\nv1 = np.array([1, 2, 3])\nv2 = np.array([4, 5, 6])\nA = np.array([[1, 2], [3, 4]])\n```",
+      "options": {
+        "A": "np.linalg.inv(A) 計算矩陣 A 的行列式",
+        "B": "v1 * v2 結果為 array([5, 7, 9])",
+        "C": "np.dot(v1, v2) 結果為 np.int64(32)",
+        "D": "np.linalg.eig(A) 計算矩陣 A 的反矩陣"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'C' for question 40"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** np.dot(v1, v2) 計算向量內積 = 1·4 + 2·5 + 3·6 = 4+10+18 = 32,回傳值為 np.int64(32)。\n\n**其他選項為何錯:**\n- A. `np.linalg.inv(A)` 計算「反矩陣」,行列式是 `np.linalg.det(A)`。\n- B. `v1 * v2` 是 element-wise 乘法 = [4, 10, 18],不是 [5, 7, 9](那是加法)。\n- C. ✓ 正解\n- D. `np.linalg.eig(A)` 計算特徵值與特徵向量,不是反矩陣。\n\n**記憶要點:** NumPy:inv → 反矩陣;det → 行列式;eig → 特徵值;dot → 內積。"
+    },
+    {
+      "id": "exam-s3-114-2-q41",
+      "topic": "Math/Probability",
+      "question_text": "[此題包含附圖:擲骰子 Monte Carlo 程式碼]\n\n```python\nimport numpy as np\nnp.random.seed(123)\nn = 100000\ndice_rolls = np.random.randint(1, 7, size=n)\nA = (dice_rolls % 2 == 0)\nB = (dice_rolls > 3)\nA_and_B = A & B\n```\n\n事件 A:擲出偶數;事件 B:擲出大於 3。請問下列何者為條件機率 P(A|B) 的正確值?",
+      "options": {
+        "A": "A_and_B.sum() / (A.sum() * B.sum())",
+        "B": "A_and_B.sum() / (A.sum() + B.sum())",
+        "C": "A_and_B.sum() / A.sum()",
+        "D": "A_and_B.sum() / B.sum()"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'D' for question 41"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 條件機率定義 P(A|B) = P(A ∩ B) / P(B);Monte Carlo 估計分子 ≈ A_and_B.sum()/n、分母 ≈ B.sum()/n,n 消去後 = A_and_B.sum() / B.sum()。\n\n**其他選項為何錯:**\n- A. 此式為 P(A ∩ B) / (n · P(A)·P(B)),為獨立情況下的偏離指標,非條件機率。\n- B. 分母改為和,公式錯誤。\n- C. C 是 P(B|A),不是 P(A|B)。\n- D. ✓ 正解\n\n**記憶要點:** P(A|B) = P(A∩B)/P(B),條件以「B」為分母。"
+    },
+    {
+      "id": "exam-s3-114-2-q42",
+      "topic": "DL/CNN",
+      "question_text": "[此題包含 VGG16 模型結構附圖]\n\n在深度神經網路中,不同層的參數量(parameter count)差異極大。有些層雖然數量少但計算量大,有些則相反。了解參數分佈情形,有助於模型壓縮與遷移學習設計。請問在 VGG16 中,下列何者的參數量最多?",
+      "options": {
+        "A": "卷積層(Conv2d)",
+        "B": "全連接層(Linear)",
+        "C": "ReLU 激活函數",
+        "D": "池化層(MaxPool2d, AdaptiveAvgPool2d)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 11,
+        "evidence": "answer column shows 'B' for question 42"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** VGG16 全連接層(尤其第一層 Linear-33 約 1.027 億參數)主導整體 138.36M 參數;卷積層因參數共享反而相對少。\n\n**其他選項為何錯:**\n- A. 卷積層參數量遠小於 FC(基於卷積核大小與通道,而非展平後的維度)。\n- B. ✓ 正解\n- C. ReLU 沒有可學習參數。\n- D. 池化層沒有可學習參數。\n\n**記憶要點:** VGG 系列參數爆炸點 = 第一個 FC(展平後 × 4096);現代設計改用 Global Avg Pool 避開。"
+    },
+    {
+      "id": "exam-s3-114-2-q43",
+      "topic": "DL/CNN",
+      "question_text": "在神經網路中,了解各層的運算量分佈,有助於模型壓縮與硬體加速的策略設計。請問在 VGG16 中,下列何者運算量(FLOPs)最多?",
+      "options": {
+        "A": "卷積層(Conv2d)",
+        "B": "全連接層(Linear)",
+        "C": "ReLU 激活函數",
+        "D": "池化層(MaxPool2d, AdaptiveAvgPool2d)"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 11,
+        "evidence": "answer column shows 'A' for question 43"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** VGG 中卷積層雖然參數量少,但每個卷積核要在大張特徵圖上滑動運算,FLOPs 遠遠超過 FC 層(FC 是矩陣乘法但輸入維度小)。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. FC 雖參數多,但只算一次矩陣乘,FLOPs 不及大張特徵圖上的卷積。\n- C. ReLU 是 element-wise 比較,FLOPs 很少。\n- D. Pooling 也是 element-wise 操作,FLOPs 少。\n\n**記憶要點:** CNN 參數量多 ≠ FLOPs 多;卷積層 FLOPs 大、FC 層參數量大,是典型分佈。"
+    },
+    {
+      "id": "exam-s3-114-2-q44",
+      "topic": "DL/CNN",
+      "question_text": "[此題基於 VGG16 模型表]\n\nVGG16 層數深且結構規則,由多層卷積、池化及全連接層組成。了解各層的輸入/輸出維度、參數量及記憶體需求,有助於掌握 CNN 模型的組成邏輯與實作技巧。根據 VGG16 的模型架構,下列敘述何者正確?",
+      "options": {
+        "A": "AdaptiveAvgPool2d 的輸出會被攤平後傳入第一個全連接層;由於前一層池化輸出空間為 4×4,所以第一個線性層的輸入維度是 512×4×4 = 8192",
+        "B": "Linear-33(第一個全連接層)報出的 102,764,544 參數只包含權重,偏差(bias)沒有算在內",
+        "C": "根據列出的「Estimated Total Size (MB) = 624.98」,表示訓練此模型只需大約 625MB 的 GPU 記憶體(包含所有 optimizer state 與梯度),所以一張 1 GB 的 GPU 就足夠訓練",
+        "D": "VGG16 包含 13 層卷積(conv)與 3 層全連接層(FC),總參數數目約為 138,357,544(約 138.36M)"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 11,
+        "evidence": "answer column shows 'D' for question 44"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** VGG16 標準架構就是 13 conv + 3 FC = 16 個權重層,總參數 ≈ 138.36M,與表底「Total params: 138,357,544」一致。\n\n**其他選項為何錯:**\n- A. 由表中 AdaptiveAvgPool2d 輸出為 [512, 7, 7],所以 FC 輸入 = 512·7·7 = 25088,而非 8192。\n- B. Linear 的參數計算 (in_features+1) × out_features,通常包含 bias;102,764,544 = 25088·4096 + 4096 已含偏差。\n- C. Estimated Total Size 只是前向/反向的記憶體估算,不含 optimizer state 與梯度;實際訓練需要更多。\n- D. ✓ 正解\n\n**記憶要點:** VGG16 = 16 個有權重層(13 conv + 3 FC),params ≈ 138M。"
+    },
+    {
+      "id": "exam-s3-114-2-q45",
+      "topic": "DL/CNN",
+      "question_text": "[此題包含 4 段 PyTorch 程式碼附圖] 在實務應用中,我們常使用遷移學習(transfer learning)技巧,即載入預訓練模型(如 VGG16),凍結部分層的參數,只針對特定任務重新訓練最後幾層,這種做法可節省訓練時間並提升模型效能。假設你要對 VGG16 進行遷移學習(transfer learning),希望凍結卷積層的參數,只訓練最後全連接層(classifier)。下列哪段程式碼寫法正確?",
+      "options": {
+        "A": "對 model.parameters() 全部凍結後,再重新指定 classifier[6]",
+        "B": "對 model.features.parameters() 凍結後,重新指定 classifier[6] = nn.Linear(4096, 10)",
+        "C": "對 model.classifier.parameters() 凍結後,重新指定 classifier[6]",
+        "D": "對 model.requires_grad = False 後,重新指定 classifier[6]"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 13,
+        "evidence": "answer column shows 'B' for question 45"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 凍結「卷積層」應只針對 `model.features.parameters()`(VGG 將卷積堆放在 `features` 子模組);classifier 保留可訓練,再覆寫 classifier[6] 為新任務的輸出層。\n\n**其他選項為何錯:**\n- A. 全部凍結後 classifier[6] 雖被替換成可訓練的新層,但仍可訓練;不過題目強調是「凍結卷積、訓練 classifier 全部」,A 雖部分對但不夠準確。\n- B. ✓ 正解\n- C. 反了:凍結了 classifier,反而訓練 features,不符合題意。\n- D. `model.requires_grad = False` 語法錯誤(此屬性是 tensor 級別,不是 model 級別)。\n\n**記憶要點:** Transfer Learning 標準步驟:凍結 features → 換 classifier 最後一層 → 訓練 classifier。"
+    },
+    {
+      "id": "exam-s3-114-2-q46",
+      "topic": "Feature/Engineering",
+      "question_text": "[此題包含 noisy 手寫數字 PCA 程式碼附圖]\n\n```\nfrom sklearn.decomposition import PCA  #程式碼A\npca = PCA()                            #程式碼B\npca.fit(noisy)                         #程式碼C\ncomponents = pca.transform(noisy)      #程式碼D\nfiltered = pca.inverse_transform(components)\n```\n\n假設研究人員已將含有雜訊的手寫數字影像存放在變數 noisy 中。他們嘗試使用 PCA 進行降噪,並希望能保留影像的主要特徵,同時去除影像中的雜訊。然而,當程式執行後,觀察到影像仍然含有明顯的雜訊。研究人員懷疑是程式中某個步驟的設定不正確,導致 PCA 沒有發揮降噪的作用,需要修改程式碼才能讓 PCA 對 noisy 影像有效去噪。請問哪一段程式碼需要修改,才能讓 PCA 對 noisy 影像有效去噪?",
+      "options": {
+        "A": "程式碼 A",
+        "B": "程式碼 B",
+        "C": "程式碼 C",
+        "D": "程式碼 D"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 15,
+        "evidence": "answer column shows 'B' for question 46"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** `PCA()` 不指定 `n_components` 時保留全部主成分,經 transform → inverse_transform 後幾乎完整還原原始(含雜訊)影像 — 沒有降維就沒有去噪。修正應為 `PCA(n_components=k)`(k < 原始維度),只保留前 k 個主成分後再重建,才能濾掉雜訊較大的高階成分。\n\n**其他選項為何錯:**\n- A. import 語法正確。\n- B. ✓ 正解\n- C. `fit` 用法正確。\n- D. `transform` 用法正確。\n\n**記憶要點:** PCA 降噪 = `PCA(n_components=k)` 保留前 k 個 + inverse_transform 重建。"
+    },
+    {
+      "id": "exam-s3-114-2-q47",
+      "topic": "Training/Validation",
+      "question_text": "[此題包含 4 段 KNN + Cross-Validation 程式碼附圖] 研究人員在對 digits 資料集進行分類時,決定使用 KNN 並搭配交叉驗證來評估模型準確率。他們撰寫了四組不同的程式碼來進行 KNN 訓練與交叉驗證,但不確定哪幾組程式碼能正確執行並輸出準確率。每組程式碼在資料切割、模型訓練、交叉驗證函式的使用上略有差異,研究人員希望找出可以正確完成任務的程式碼組合,以確保模型評估的可靠性。請問哪幾組程式碼能正確使用 KNN 搭配交叉驗證,對 digits 資料集進行訓練並輸出準確率?",
+      "options": {
+        "A": "程式碼 A、程式碼 B、程式碼 C、程式碼 D",
+        "B": "程式碼 A、程式碼 C",
+        "C": "程式碼 A、程式碼 B",
+        "D": "程式碼 C、程式碼 D"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 15,
+        "evidence": "answer column shows 'B' for question 47"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 題目要求「輸出準確率」(accuracy),scoring 必須設為 `\"accuracy\"`。\n- 程式碼 A:`scoring=\"accuracy\"` ✓\n- 程式碼 C:`scoring=\"accuracy\"` ✓\n- 程式碼 B、D:`scoring=\"f1\"`,且 f1 預設只支援二元;digits 是 10 類多分類,會報錯。\n\n**其他選項為何錯:**\n- A. 含 B、D(scoring 設為 f1 對多分類錯誤)。\n- B. ✓ 正解\n- C. 含 B(同上問題)。\n- D. 含 D(同上問題)。\n\n**記憶要點:** `cross_val_score` 的 `scoring` 要對應任務:分類用 'accuracy' / 'f1_macro' 等,多分類不能直接 'f1'。"
+    },
+    {
+      "id": "exam-s3-114-2-q48",
+      "topic": "Feature/Engineering",
+      "question_text": "[此題基於 Titanic 資料集標準化程式碼]\n\n```python\nX_train -= X_train.mean(axis=0)\nX_train /= X_train.std(axis=0)\nX_test -= X_test.mean(axis=0)\nX_test /= X_test.std(axis=0)\n```\n\nA:X_train -= X_train.mean(axis=0) 將每個訓練集特徵的平均值調整為 0\nB:X_train /= X_train.std(axis=0) 將每個訓練集特徵的標準差調整為 0\nC:X_train 處理結果會將資料壓縮到 0 和 1 之間\nD:標準化結果可防止梯度爆炸或消失\nE:標準化是屬於特徵選擇(Feature Selection)方法\nF:X_train 程式碼應修正為 X_train = X_train.std(axis=0), X_test 程式碼應修正為 X_test = X_test.std(axis=0)",
+      "options": {
+        "A": "A、B、C、D",
+        "B": "A、E",
+        "C": "A、D",
+        "D": "A、C、F"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 17,
+        "evidence": "answer column shows 'C' for question 48"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** \n- A 正確:減去 mean 後平均變為 0。\n- D 正確:Z-score 標準化讓特徵分佈穩定,有助梯度數值不致爆炸或消失。\n- B 錯誤:除以 std 後標準差變為 1,而非 0。\n- C 錯誤:Z-score 結果分佈於 0 附近,不限制於 [0,1](Min-Max 才會)。\n- E 錯誤:標準化是 Feature Scaling,不是 Feature Selection。\n- F 錯誤:把原本「除以」改成「等於 std」會破壞標準化。\n\n注意題目本身存在資料洩漏疑慮(測試集用自己的 mean/std),但本題只測這六項敘述對錯。\n\n**其他選項為何錯:**\n- A. 含錯誤敘述 B、C。\n- B. 含錯誤敘述 E。\n- C. ✓ 正解\n- D. 含錯誤敘述 C、F。\n\n**記憶要點:** Z-score:減 mean、除 std → 均值 0、std 1;非 0~1 區間。"
+    },
+    {
+      "id": "exam-s3-114-2-q49",
+      "topic": "DL/Basics",
+      "question_text": "[此題基於 Keras Sequential 模型 summary 結果,輸入維度為 9 (X_train.shape[1]=9),隱藏層為 dense(10)+dense(10)+dense(1)]\n\n```python\nmodel = Sequential()\nmodel.add(Input(shape=(X_train.shape[1],)))\nmodel.add(Dense(10, activation=\"relu\"))\nmodel.add(Dense(10, activation=\"relu\"))\nmodel.add(Dense(1, activation=\"sigmoid\"))\n```\n\n空格 1 (第一個 Dense 的參數量) 與空格 2 (第二個 Dense 的參數量) 為何?",
+      "options": {
+        "A": "activation=\"relu\" 其數學式為 f(x) = 1/(1+e^-x)",
+        "B": "空格 1 值為 110,空格 2 值為 100",
+        "C": "空格 1 值為 100,空格 2 值為 110",
+        "D": "activation=\"sigmoid\" 一般用於多類別分類預測模型"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 18,
+        "evidence": "answer column shows 'C' for question 49"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** \n- 第一個 Dense(10):輸入 9 → 10,參數 = 9·10 + 10 (bias) = 100。\n- 第二個 Dense(10):輸入 10 → 10,參數 = 10·10 + 10 = 110。\n\n**其他選項為何錯:**\n- A. `f(x) = 1/(1+e⁻ˣ)` 是 Sigmoid 的公式,不是 ReLU;ReLU 是 max(0, x)。\n- B. 數值顛倒。\n- C. ✓ 正解\n- D. Sigmoid 用於「二元」分類;多類別分類用 Softmax。\n\n**記憶要點:** Dense 參數 = (in × out) + out_bias。"
+    },
+    {
+      "id": "exam-s3-114-2-q50",
+      "topic": "Training/Validation",
+      "question_text": "[此題基於 Titanic Keras 訓練曲線:Training Loss 持續下降至 ~0.4,Validation Loss 在 0.45 附近震盪]\n\n```python\nhistory = model.fit(X_train, y_train, validation_split=0.2, epochs=100, batch_size=10)\nplt.plot(epochs, loss, 空格1, label=\"Training Loss\")\nplt.plot(epochs, val_loss, 空格2, label=\"Validation Loss\")\n```\n\nA:空格 1 須填入 \"b-\"\nB:空格 2 須填入 \"b--\"\nC:空格 1 須填入 \"r-\"\nD:空格 2 須填入 \"r--\"\nE:驗證損失明顯較訓練損失減少更明顯",
+      "options": {
+        "A": "B、C",
+        "B": "A、C、D",
+        "C": "A、D",
+        "D": "C、D、E"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "page": 19,
+        "evidence": "answer column shows 'C' for question 50"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 由附圖可見:訓練損失為「藍實線(b-)」,驗證損失為「紅虛線(r--)」。\n- A 正確:空格 1 = \"b-\"。\n- D 正確:空格 2 = \"r--\"。\n- B 錯誤:Validation 是紅色虛線 \"r--\",不是 \"b--\"。\n- C 錯誤:Training 是藍色實線 \"b-\",不是 \"r-\"。\n- E 錯誤:由圖驗證損失早早平緩,訓練損失反而持續下降更明顯,典型過擬合徵兆。\n\n**其他選項為何錯:**\n- A. 含錯誤 B。\n- B. 含錯誤 C。\n- C. ✓ 正解\n- D. 含錯誤 C 與 E。\n\n**記憶要點:** matplotlib 顏色+樣式:b=blue, r=red;-=solid, --=dashed。"
+    },
+    {
+      "id": "sample-s3-114-09-q1",
+      "topic": "BigData/Processing",
+      "question_text": "在 MapReduce 計算框架中,關於 Map 和 Reduce 所負責處理資料的問題,下列敘述何者正確?",
+      "options": {
+        "A": "Map:一組資料映射成另一組資料;Reduce:統合與歸納資料",
+        "B": "Map:地圖式的搜索資料;Reduce:統合與歸納資料",
+        "C": "Map:一組資料映射成另一組資料;Reduce:過濾不符合的資料",
+        "D": "Map:一組資料映射成另一組資料;Reduce:生成更多的資料"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'A' for question 1"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** MapReduce 的核心:Map 將輸入鍵值對轉換為中間鍵值對(映射);Reduce 對相同 key 的中間結果做彙總(統合歸納),如加總、計數等。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. Map 不是搜尋,是轉換。\n- C. Reduce 是聚合,不僅是過濾。\n- D. Reduce 是歸納收斂,不是產生更多資料。\n\n**記憶要點:** Map = 一對一/一對多映射;Reduce = 多對一聚合。"
+    },
+    {
+      "id": "sample-s3-114-09-q2",
+      "topic": "DL/CNN",
+      "question_text": "下列何種卷積神經網路(Convolution Neural Networks, CNN)是將卷積層加寬而非加深?",
+      "options": {
+        "A": "R-CNN",
+        "B": "Inception",
+        "C": "ResNet",
+        "D": "VGG19"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'B' for question 2"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Inception(GoogLeNet)的核心模組在同一層同時使用 1×1、3×3、5×5 卷積與 pooling 平行處理,然後 concat — 屬於「加寬」(增加寬度/多分支)而非加深。\n\n**其他選項為何錯:**\n- A. R-CNN 是物件偵測框架,不討論寬深。\n- B. ✓ 正解\n- C. ResNet 透過殘差連接「加深」(可堆到 152 層)。\n- D. VGG19 是堆疊 19 層 3×3 卷積,屬於「加深」型。\n\n**記憶要點:** Inception = 寬;ResNet/VGG = 深。"
+    },
+    {
+      "id": "sample-s3-114-09-q3",
+      "topic": "Eval/Bias",
+      "question_text": "當模型的訓練誤差(Training Error)低、但測試誤差(Test Error)很大時,這通常是在訓練過程中產生下列哪一種情況?",
+      "options": {
+        "A": "模型的泛化能力強",
+        "B": "模型出現過度擬合(Overfitting)",
+        "C": "模型出現欠擬合(Underfitting)",
+        "D": "訓練資料和測試資料之間沒有相關性"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'B' for question 3"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 訓練誤差小、測試誤差大是過擬合(Overfitting)的典型特徵 — 模型過於配適訓練資料,泛化能力差。\n\n**其他選項為何錯:**\n- A. 泛化強應在測試集表現也好。\n- B. ✓ 正解\n- C. 欠擬合時訓練誤差也大。\n- D. 訓練/測試通常來自同分佈,不太可能完全無關。\n\n**記憶要點:** Train 低 + Test 高 = Overfitting;Train 高 + Test 高 = Underfitting。"
+    },
+    {
+      "id": "sample-s3-114-09-q4",
+      "topic": "Eval/Metrics",
+      "question_text": "下列哪一種指標通常用於評估迴歸模型的效能?",
+      "options": {
+        "A": "R²",
+        "B": "F1-分數",
+        "C": "曲線下面積(AUC)",
+        "D": "Precision"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'A' for question 4"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** R²(決定係數)衡量迴歸模型解釋變異的比例,是最常用的迴歸效能指標之一(其他常用如 MSE、RMSE、MAE)。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. F1 用於分類。\n- C. AUC 用於二元分類。\n- D. Precision 用於分類。\n\n**記憶要點:** 迴歸 → R²/MSE/RMSE/MAE;分類 → Accuracy/Precision/Recall/F1/AUC。"
+    },
+    {
+      "id": "sample-s3-114-09-q5",
+      "topic": "DL/Basics",
+      "question_text": "近年來,深度學習研究與應用蓬勃發展,但數據本身可能存在什麼潛在問題?",
+      "options": {
+        "A": "數據標註品質鮮少被討論,但它卻直接影響模型性能",
+        "B": "數據品質是完美可信賴的",
+        "C": "大部分情況下,數據不存在類別不平衡問題",
+        "D": "數據不需要領域知識的輔助"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'A' for question 5"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 標註品質常被忽略,但 garbage-in-garbage-out — 標籤錯誤、不一致會直接限制模型上限,是深度學習實務中最關鍵卻常被低估的問題。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 真實資料常含噪音、缺失值與偏誤。\n- C. 類別不平衡是極常見現象。\n- D. 領域知識對特徵設計、標註定義都很重要。\n\n**記憶要點:** Data-centric AI 強調:資料品質與標註,常比模型架構更影響成果。"
+    },
+    {
+      "id": "sample-s3-114-09-q6",
+      "topic": "DL/Basics",
+      "question_text": "在分類任務中,深度學習模型通常搭配哪一種輸出函數?",
+      "options": {
+        "A": "Tanh",
+        "B": "ReLU",
+        "C": "Sigmoid 或 Softmax",
+        "D": "Dropout"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'C' for question 6"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 二元分類用 Sigmoid(輸出 0~1 機率);多類分類用 Softmax(各類機率和為 1)。\n\n**其他選項為何錯:**\n- A. Tanh 輸出 −1~1,常用於隱藏層而非分類輸出。\n- B. ReLU 是隱藏層激活函數。\n- C. ✓ 正解\n- D. Dropout 是正則化技術,不是輸出函數。\n\n**記憶要點:** 二元 → Sigmoid;多類 → Softmax;Tanh/ReLU 偏隱藏層。"
+    },
+    {
+      "id": "sample-s3-114-09-q7",
+      "topic": "ML/Unsupervised",
+      "question_text": "下列哪一種學習任務不適合使用監督式學習方法處理?",
+      "options": {
+        "A": "客戶信用風險分類",
+        "B": "預測未來銷售額",
+        "C": "找出資料中的潛在群集",
+        "D": "判斷影像是否為貓或狗"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'C' for question 7"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 「找出潛在群集」沒有預先給定的標籤,屬於非監督式學習(分群),典型方法如 K-means、DBSCAN、階層式分群。\n\n**其他選項為何錯:**\n- A. 信用風險分類有標籤(違約/未違約),屬監督式分類。\n- B. 銷售額有歷史數值作為標籤,屬監督式迴歸。\n- C. ✓ 正解\n- D. 影像分類有標籤,屬監督式。\n\n**記憶要點:** 有標籤 → 監督式;無標籤、找結構 → 非監督。"
+    },
+    {
+      "id": "sample-s3-114-09-q8",
+      "topic": "Math/LinAlg",
+      "question_text": "在神經網路中,前向傳播(Forward Propagation)主要依賴下列哪一種數學操作?",
+      "options": {
+        "A": "機率積分",
+        "B": "矩陣乘法與向量內積",
+        "C": "對數變換",
+        "D": "條件機率推論"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 8"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 神經網路每一層 z = Wx + b,本質上就是矩陣乘法(權重 W 與輸入 x 的線性組合);卷積在數學上也可表達為矩陣運算(im2col)。\n\n**其他選項為何錯:**\n- A. 機率積分不是前向傳播核心。\n- B. ✓ 正解\n- C. 對數變換非主流操作。\n- D. 條件機率推論是貝氏網路範疇。\n\n**記憶要點:** Forward Pass 本質 = 大量矩陣乘法 + 激活函數;這是 GPU 加速的根本理由。"
+    },
+    {
+      "id": "sample-s3-114-09-q9",
+      "topic": "Feature/Engineering",
+      "question_text": "特徵縮放(Feature Scaling)中,下列何者為標準化(Standardization)的主要作用?",
+      "options": {
+        "A": "將數據範圍限制在 0 到 1 且標準差 -1",
+        "B": "使數據平均值為 0 且標準差為 1",
+        "C": "移除數據中的異常值",
+        "D": "增加特徵間的相關性"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 9"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 標準化(Z-score)= (X − μ)/σ,結果均值 0、標準差 1。\n\n**其他選項為何錯:**\n- A. 「0 到 1」是 Min-Max Normalization;且「標準差 -1」概念有誤。\n- B. ✓ 正解\n- C. 標準化不會移除 outlier。\n- D. 不會增加相關性。\n\n**記憶要點:** Standardization → mean=0, std=1;Normalization (Min-Max) → 0~1。"
+    },
+    {
+      "id": "sample-s3-114-09-q10",
+      "topic": "Eval/Metrics",
+      "question_text": "關於準確率(Accuracy)的計算方式,下列何者正確?",
+      "options": {
+        "A": "TP/(TP+FP)",
+        "B": "(TP+TN)/(TP+FP+TN+FN)",
+        "C": "TN/(TN+FP)",
+        "D": "TP/(TP+FN)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 10"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Accuracy = 正確預測數 / 全部預測數 = (TP + TN) / (TP + TN + FP + FN)。\n\n**其他選項為何錯:**\n- A. TP/(TP+FP) 是 Precision。\n- B. ✓ 正解\n- C. TN/(TN+FP) 是 Specificity(真陰性率)。\n- D. TP/(TP+FN) 是 Recall / Sensitivity。\n\n**記憶要點:** Accuracy 分母 = 全部;Precision 分母 = 預測為陽性;Recall 分母 = 實際為陽性。"
+    },
+    {
+      "id": "sample-s3-114-09-q11",
+      "topic": "ML/Supervised",
+      "question_text": "關於損失函數(Loss Function)的主要功能,下列何者正確?",
+      "options": {
+        "A": "記錄模型預測歷史",
+        "B": "計算模型結構複雜度",
+        "C": "控制模型的學習率",
+        "D": "衡量模型預測與真實值之間的誤差"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'D' for question 11"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 損失函數量化「預測值 vs 真實值」差距,訓練的目標就是透過梯度下降最小化此值。\n\n**其他選項為何錯:**\n- A. 預測歷史是訓練紀錄(history),不是 loss function。\n- B. 模型複雜度由參數量、深度等衡量,不是 loss function。\n- C. 學習率是優化器的超參數。\n- D. ✓ 正解\n\n**記憶要點:** Loss Function = 預測誤差的量化;訓練 = 最小化 Loss。"
+    },
+    {
+      "id": "sample-s3-114-09-q12",
+      "topic": "Privacy/Compliance",
+      "question_text": "關於歐盟《一般資料保護規則(GDPR)》所謂的被遺忘權(Right to be Forgotten)主要賦予資料主體哪一項權利?",
+      "options": {
+        "A": "要求平台永久備份其個資以防遺失",
+        "B": "在符合條件下請求刪除其個人資料",
+        "C": "將個人資料轉換為匿名格式保存",
+        "D": "限制企業將資料輸出至境外伺服器"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 12"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** GDPR 第 17 條的「被遺忘權」(Right to Erasure)允許資料主體在特定條件下(資料已不需要、撤回同意、違法處理等)請求資料控制者刪除其個人資料。\n\n**其他選項為何錯:**\n- A. 永久備份反而與「被遺忘」相反。\n- B. ✓ 正解\n- C. 匿名化是另一機制(GDPR 對匿名化資料不再視為個資)。\n- D. 跨境傳輸是另一項條款(第 44~50 條)。\n\n**記憶要點:** GDPR 被遺忘權 = 請求刪除;與匿名化、跨境傳輸不同條文。"
+    },
+    {
+      "id": "sample-s3-114-09-q13",
+      "topic": "Feature/Engineering",
+      "question_text": "在進行模型訓練前,若針對資料中不同群體(例如分類標籤)之間樣本數量不平衡的情況進行比例調整,此方法通常屬於下列哪一種技術?",
+      "options": {
+        "A": "資料重抽樣",
+        "B": "特徵選擇",
+        "C": "模型正則化",
+        "D": "超參數調整"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'A' for question 13"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 調整類別樣本比例(過採樣、欠採樣、SMOTE 等)屬於資料重抽樣(Resampling)技術,直接改變訓練資料分佈。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 特徵選擇針對特徵欄位,不是樣本。\n- C. 正則化是模型內部複雜度懲罰。\n- D. 超參數調整不涉及樣本平衡。\n\n**記憶要點:** 類別不平衡的標準應對 = Resampling(Oversample/Undersample/SMOTE) 或 class_weight。"
+    },
+    {
+      "id": "sample-s3-114-09-q14",
+      "topic": "DL/Optimization",
+      "question_text": "在優化器中,哪一個方法會自動調整每個參數的學習率,特別適用於稀疏資料?",
+      "options": {
+        "A": "Momentum",
+        "B": "Adagrad",
+        "C": "Adam",
+        "D": "SGD"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'B' for question 14"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Adagrad 為每個參數累積歷史梯度平方,自動把更新頻繁(梯度大)的參數學習率縮小,對稀疏特徵(罕見出現但重要)能保持較大的學習率,適合稀疏資料(如 NLP 詞向量)。\n\n**其他選項為何錯:**\n- A. Momentum 僅對所有參數同步加動量,不調整 per-parameter LR。\n- B. ✓ 正解\n- C. Adam 也有自適應 LR(且結合動量),但題目強調「特別適用稀疏資料」的歷史典故指向 Adagrad。\n- D. SGD 對所有參數共用單一 LR。\n\n**記憶要點:** Adagrad = per-parameter 自適應 LR,專為稀疏資料設計;後繼者 RMSProp、Adam 改善其 LR 過快衰減問題。"
+    },
+    {
+      "id": "sample-s3-114-09-q15",
+      "topic": "ML/Supervised",
+      "question_text": "[此題包含附圖:4 段 sklearn 程式碼片段 a/b/c/d] 某零售公司希望利用顧客的年齡與每月消費金額,預測顧客是否為高價值顧客。提供相關資料 data.csv,包含欄位 Age、Spending、HighValue。請將下列程式碼片段依正確順序排序,以完成模型的建立與預測。\n\n程式碼片段:\n- a. from sklearn.model_selection import train_test_split; X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n- b. from sklearn.linear_model import LogisticRegression; model = LogisticRegression(); model.fit(X_train, y_train)\n- c. import pandas as pd; data = pd.read_csv(\"data.csv\"); X = data[['Age', 'Spending']]; y = data['HighValue']\n- d. y_pred = model.predict(X_test); print(\"Predictions:\", y_pred[:5])",
+      "options": {
+        "A": "c → a → b → d",
+        "B": "a → c → b → d",
+        "C": "c → b → a → d",
+        "D": "b → a → c → d"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'A' for question 15"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 正確的 ML 流程:(1) 載入資料並切分 X/y → c;(2) 切分訓練/測試集 → a;(3) 訓練模型 → b;(4) 預測 → d。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 先 split 再讀資料不符流程。\n- C. 沒有 train_test_split 前就 fit,且 X_train 尚未定義。\n- D. 還沒讀資料就 fit,變數未定義。\n\n**記憶要點:** 標準流程:Load Data → Train/Test Split → Train Model → Predict → Evaluate。"
+    }
+  ],
+  "rounds": [],
+  "weak_topics": {}
+}

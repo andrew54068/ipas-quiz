@@ -1,0 +1,1314 @@
+{
+  "version": 1,
+  "test_name": "iPAS AI 應用規劃師中級 科目二 大數據處理分析與應用",
+  "subject_code": "s2",
+  "subject_short": "大數據",
+  "source_files": [
+    "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+    "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf"
+  ],
+  "verified_question_pool": [
+    {
+      "id": "exam-s2-114-2-q1",
+      "topic": "Stats/Descriptive",
+      "question_text": "若某數據點的 Z 分數(Z-Score)= 2,請問代表下列哪一種意涵?",
+      "options": {
+        "A": "代表該數據點之原始數值為 2",
+        "B": "該數據點比平均值低 2 個標準差",
+        "C": "代表數據為異常值",
+        "D": "該數據點比平均值高 2 個標準差"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'D' for question 1"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** Z 分數 = (X − μ) / σ,Z = 2 代表該數據點距平均值「正向」2 個標準差,即比平均值高 2 個標準差。\n\n**其他選項為何錯:**\n- A. Z 分數是標準化後的相對位置,非原始值。\n- B. 比平均值低應為負 Z,Z = −2 才表示低 2 個標準差。\n- C. 通常 |Z| ≥ 3 才視為異常值,Z = 2 仍在常見範圍。\n- D. ✓ 正解\n\n**記憶要點:** Z 分數正向 = 高於平均;|Z| ≥ 3 才常被當作 outlier。"
+    },
+    {
+      "id": "exam-s2-114-2-q2",
+      "topic": "Analytics/EDA",
+      "question_text": "使用 Python 的 pandas 套件處理各商品銷售數據(變數為 df)時,若需計算「總銷售額」欄位的敘述性統計量(如平均值、標準差等),應使用下列哪一種語法?",
+      "options": {
+        "A": "df['總銷售額'].sum()",
+        "B": "df['總銷售額'].describe()",
+        "C": "df['總銷售額'].sort_values()",
+        "D": "df['總銷售額'].stats()"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'B' for question 2"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** pandas 的 `describe()` 會一次回傳 count、mean、std、min、25%、50%、75%、max 等敘述性統計量,正好符合題目需求。\n\n**其他選項為何錯:**\n- A. `sum()` 只回傳加總,不含平均與標準差。\n- B. ✓ 正解\n- C. `sort_values()` 是排序,與描述統計無關。\n- D. pandas 沒有 `stats()` 這個方法。\n\n**記憶要點:** 描述統計一鍵打包 → `describe()`。"
+    },
+    {
+      "id": "exam-s2-114-2-q3",
+      "topic": "Stats/Descriptive",
+      "question_text": "[此題包含附圖:資料分佈直方圖,主要密度峰值集中在 30~45,左側尾部延伸至 −20] 附圖為某資料之分佈圖,此圖資料之偏態(Skewness)值較有可能為下列哪個選項?",
+      "options": {
+        "A": "Skewness < 0",
+        "B": "Skewness > 0",
+        "C": "Skewness = 0",
+        "D": "無法計算 Skewness"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'A' for question 3"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 圖中資料的「尾巴」拖向左側(負值方向),屬於左偏(負偏態),Skewness < 0。負偏態時平均數通常 < 中位數 < 眾數。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 右偏(Skewness > 0)時尾巴拉向右,與圖示相反。\n- C. Skewness = 0 表示完全對稱(如常態分佈),此圖明顯不對稱。\n- D. 只要有資料即可計算偏態。\n\n**記憶要點:** 尾巴向哪邊,偏態符號就跟著哪邊;左尾 → 負偏。"
+    },
+    {
+      "id": "exam-s2-114-2-q4",
+      "topic": "Stats/Probability",
+      "question_text": "累積分佈函數(Cumulative Distribution Function, CDF)可用於描述隨機變數的機率分佈特性,其數學定義為下列何者?",
+      "options": {
+        "A": "機率密度函數(Probability Density Function, PDF)的平均值",
+        "B": "機率密度函數(Probability Density Function, PDF)的積分",
+        "C": "機率密度函數(Probability Density Function, PDF)的離散總和",
+        "D": "機率密度函數(Probability Density Function, PDF)的標準差"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 1,
+        "evidence": "answer column shows 'B' for question 4"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 對連續隨機變數,CDF(x) = ∫_{−∞}^{x} f(t) dt,亦即 PDF 從負無窮到 x 的積分,代表「X ≤ x 的機率」。\n\n**其他選項為何錯:**\n- A. PDF 的平均值不是 CDF 的定義。\n- B. ✓ 正解\n- C. 離散總和(Σ)是離散變數機率質量函數(PMF)的累積方式,非連續 PDF。\n- D. 標準差與 CDF 完全不同概念。\n\n**記憶要點:** 連續 → CDF = PDF 積分;離散 → CDF = PMF 累加。"
+    },
+    {
+      "id": "exam-s2-114-2-q5",
+      "topic": "FeatureEng",
+      "question_text": "在進行資料前處理時,若使用 Label Encoding 將類別變數轉換為數字型態,下列何者為最常見的潛在風險?",
+      "options": {
+        "A": "無法處理缺值",
+        "B": "會引入類別之間的虛假順序關係",
+        "C": "無法擴展至新資料",
+        "D": "記憶體佔用過高"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'B' for question 5"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Label Encoding 將類別映射為整數(如紅=0、綠=1、藍=2),會讓模型誤判類別之間存在數值大小或順序關係,對無序(Nominal)資料尤其危險。\n\n**其他選項為何錯:**\n- A. 缺值處理是另一前處理步驟,不是 Label Encoding 特有問題。\n- B. ✓ 正解\n- C. 可以擴展,只要重新 fit/map。\n- D. Label Encoding 反而比 One-Hot 省記憶體。\n\n**記憶要點:** 無序類別 → 用 One-Hot;有序類別才適合 Label Encoding。"
+    },
+    {
+      "id": "exam-s2-114-2-q6",
+      "topic": "FeatureEng",
+      "question_text": "在進行資料分析時,會遇到類別型(Categorical)與數值型(Numerical)資料格式。關於這兩種資料格式的處理,下列敘述何者不正確?",
+      "options": {
+        "A": "One-Hot 編碼(One-Hot Encoding)會將類別變數轉換為多維二元向量,適用於無序(Nominal)類別資料,但在高基數(High Cardinality)特徵下可能造成維度爆炸問題",
+        "B": "標籤編碼(Label Encoding)會以整數表示不同類別,若應用於無序(Nominal)資料,可能導致模型誤將編碼值解讀為具數值大小關係的特徵",
+        "C": "標準化(Standardization)透過將資料平移與縮放,使其平均值為 0、標準差為 1,可在多數距離型演算法中改善收斂速度,並同時將數值範圍壓縮至 0 至 1 之間",
+        "D": "對連續變數進行分箱(Binning)可提升模型可解釋性,但若分段方式未依據資料分佈特性設計,可能導致資訊損失或邊界偏誤"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'C' for question 6"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是錯誤(即為「不正確」的選項,故為正解):** 標準化(Z-score)只保證平均 0、標準差 1,並不會把數值壓縮至 [0, 1] 範圍;將值壓到 [0, 1] 是 Min-Max 正規化(Normalization)。\n\n**其他選項為何錯(此題找錯誤敘述):**\n- A. 描述正確:One-Hot 適用無序、但高基數會維度爆炸。\n- B. 描述正確:Label Encoding 用於無序資料會引入虛假順序。\n- C. ✓ 正解(此敘述錯誤)\n- D. 描述正確:分箱可增可解釋性,但邊界設計不當會損失資訊。\n\n**記憶要點:** Standardization → 均值 0、std 1;Normalization (Min-Max) → 0~1。"
+    },
+    {
+      "id": "exam-s2-114-2-q7",
+      "topic": "BigData/Storage",
+      "question_text": "在資料庫的 ACID 特性中,下列何者為「原子性(Atomicity)」的正確定義?",
+      "options": {
+        "A": "所有資料欄位必須為相同型別",
+        "B": "每次交易需以批次方式執行",
+        "C": "交易不可分割,需完全成功或完全失敗",
+        "D": "系統會自動同步交易資料至所有節點"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'C' for question 7"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** Atomicity(原子性)指一個交易內的所有操作要麼全部成功提交(Commit),要麼全部回滾(Rollback)— 不允許部分成功的中間狀態。\n\n**其他選項為何錯:**\n- A. 與型別一致性無關。\n- B. 批次處理是執行方式,非 ACID 特性。\n- C. ✓ 正解\n- D. 多節點同步較接近 Consistency 或分散式系統的 Replication,而非原子性。\n\n**記憶要點:** ACID = Atomicity(全有全無)、Consistency、Isolation、Durability。"
+    },
+    {
+      "id": "exam-s2-114-2-q8",
+      "topic": "FeatureEng",
+      "question_text": "資料科學家為分析顧客行為,利用現有欄位「銷售金額」與「瀏覽次數」,計算出新變數「銷售金額/瀏覽次數」。此動作屬於下列哪一類特徵工程方法?",
+      "options": {
+        "A": "特徵選擇(Feature Selection)",
+        "B": "特徵衍生(Feature Derivation)",
+        "C": "特徵轉換(Feature Transformation)",
+        "D": "分箱處理(Binning)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 2,
+        "evidence": "answer column shows 'B' for question 8"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 由既有欄位透過運算(加減乘除、比率等)組合出新特徵,屬於特徵衍生(Feature Derivation / Feature Construction)。\n\n**其他選項為何錯:**\n- A. 特徵選擇是從現有特徵中挑出子集,不會產生新特徵。\n- B. ✓ 正解\n- C. 特徵轉換(如標準化、對數轉換)是改變既有特徵的表示形式,而非組合新欄位。\n- D. 分箱是把連續變數切成區間。\n\n**記憶要點:** 用舊欄位合成新欄位 → Derivation;從已有挑子集 → Selection。"
+    },
+    {
+      "id": "exam-s2-114-2-q9",
+      "topic": "FeatureEng",
+      "question_text": "在進行數值特徵的標準化(Normalization)時,若資料中存在極端值(Outliers),下列哪一種方法最適合使用?",
+      "options": {
+        "A": "Min-Max 正規化(Min-Max Scaling)",
+        "B": "Z-score 標準化(Z-score Normalization)",
+        "C": "穩健縮放(Robust Scaling)",
+        "D": "標準分箱(Standard Binning)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'C' for question 9"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** Robust Scaling 採用中位數與四分位距(IQR)作為中心與尺度,不受極端值影響,適用於含 outlier 的資料。\n\n**其他選項為何錯:**\n- A. Min-Max 直接受最大/最小值左右,極端值會把多數資料壓在很小區間。\n- B. Z-score 用平均數與標準差,極端值會嚴重拉動兩者。\n- C. ✓ 正解\n- D. 標準分箱並非處理 outlier 的縮放方法。\n\n**記憶要點:** 有 outlier → 用中位數/IQR 的 Robust Scaler。"
+    },
+    {
+      "id": "exam-s2-114-2-q10",
+      "topic": "Analytics/Methods",
+      "question_text": "下列哪一種情境最適合應用異常偵測(Anomaly Detection)技術?",
+      "options": {
+        "A": "根據歷史銷售資料預測特定商品在旺季期間是否會出現供貨短缺,以提前調整庫存策略",
+        "B": "透過信用風險模型預測顧客是否可能發生違約,以輔助核貸決策",
+        "C": "即時分析金融交易資料流,偵測與平常交易行為明顯不同的可疑交易紀錄",
+        "D": "監控線上服務平台的使用者登入次數,預測次日的登入量變化趨勢"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'C' for question 10"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 異常偵測的目標就是識別「與常態行為顯著不同」的資料點;即時偵測可疑交易正是其經典應用(信用卡盜刷、洗錢偵測)。\n\n**其他選項為何錯:**\n- A. 屬於需求/銷售預測(Regression/Forecasting)。\n- B. 屬於違約分類(Classification)。\n- C. ✓ 正解\n- D. 屬於時間序列預測。\n\n**記憶要點:** 找「異常少數」→ Anomaly Detection;預測「未來數值」→ Forecasting/Regression。"
+    },
+    {
+      "id": "exam-s2-114-2-q11",
+      "topic": "BigData/Processing",
+      "question_text": "若一家公司需即時監控大量物聯網裝置的異常行為,下列哪一種組合最適合此應用?",
+      "options": {
+        "A": "傳統關聯式資料庫+圖形視覺化",
+        "B": "批次資料處理+雲端備份",
+        "C": "大數據平台+即時資料分析技術",
+        "D": "Word 文件+手動標註"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'C' for question 11"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 大量 IoT 裝置產生高速資料流,需要可橫向擴展的大數據平台搭配串流(Stream)即時分析技術(如 Kafka + Spark Streaming / Flink)才能即時偵測異常。\n\n**其他選項為何錯:**\n- A. 傳統 RDBMS 難以承受高吞吐串流。\n- B. 批次處理無法達到「即時」。\n- C. ✓ 正解\n- D. 手動方式完全不符規模需求。\n\n**記憶要點:** 即時 + 大量 = 串流式大數據平台。"
+    },
+    {
+      "id": "exam-s2-114-2-q12",
+      "topic": "Analytics/Methods",
+      "question_text": "在處理分類問題時,若某一類樣本數明顯少於其他類別,研究人員可採用隨機過採樣(Random Oversampling)以平衡資料比例,此方法最常造成下列哪一種問題?",
+      "options": {
+        "A": "增加過擬合風險",
+        "B": "降低模型的收斂速度",
+        "C": "減少資料總筆數數量",
+        "D": "導致訓練資料欄位缺失"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'A' for question 12"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** Random Oversampling 直接重複複製少數類樣本,模型可能對這些重複樣本「死記」,導致對訓練資料過擬合(Overfitting)。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 樣本數增加未必明顯影響收斂速度。\n- C. 過採樣是增加樣本,不是減少。\n- D. 不會造成欄位缺失。\n\n**記憶要點:** 過採樣 → 過擬合風險高;改用 SMOTE 合成樣本可緩解。"
+    },
+    {
+      "id": "exam-s2-114-2-q13",
+      "topic": "Privacy",
+      "question_text": "下列何者為同態加密(Homomorphic Encryption)技術的核心特性?",
+      "options": {
+        "A": "將資料轉換為匿名識別碼以隱藏身分",
+        "B": "對資料進行標準化處理以提升模型精度",
+        "C": "自動偵測與排除異常值",
+        "D": "可直接在加密狀態下進行數據運算"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 3,
+        "evidence": "answer column shows 'D' for question 13"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 同態加密的核心就是允許在密文(加密狀態)上直接執行運算,解密後得到的結果等同於在明文上運算的結果;適用於雲端計算的隱私保護。\n\n**其他選項為何錯:**\n- A. 匿名化(Anonymization)的範疇,不是同態加密。\n- B. 與加密無關。\n- C. 與加密無關。\n- D. ✓ 正解\n\n**記憶要點:** Homomorphic = 在加密上算,結果可解;隱私計算的明星技術。"
+    },
+    {
+      "id": "exam-s2-114-2-q14",
+      "topic": "Analytics/Methods",
+      "question_text": "某組資料共 10 項標籤如下:A, A, A, A, A, B, B, B, B, B。若該標籤僅有 A、B 兩種,請問這組資料的「正規化吉尼不純度(Normalized Gini impurity)」為何?",
+      "options": {
+        "A": "0",
+        "B": "0.42",
+        "C": "0.84",
+        "D": "1"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'D' for question 14"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 吉尼不純度 = 1 − Σpᵢ²。此處 p_A = p_B = 0.5,Gini = 1 − (0.25 + 0.25) = 0.5,為二類問題的最大值。「正規化」是除以最大可能 Gini,所以正規化後 Gini = 0.5 / 0.5 = 1,代表純度最差(完全均勻)。\n\n**其他選項為何錯:**\n- A. 0 代表完全純淨(只有一類),不符題意。\n- B. 此值未對應任何標準計算結果。\n- C. 此值未對應任何標準計算結果。\n- D. ✓ 正解\n\n**記憶要點:** 兩類各半 → Gini = 0.5(最大值);正規化後最大不純度 = 1。"
+    },
+    {
+      "id": "exam-s2-114-2-q15",
+      "topic": "Stats/Probability",
+      "question_text": "某客服中心統計資料發現,平均每小時會接到約 20 通顧客來電,但每分鐘的來電數量不固定,可能為 0、1、2 通不等。這些來電事件彼此獨立,且在短時間內,發生的機率與時間長短成正比。若要以機率模型描述「每分鐘接到幾通來電」的機率分佈,下列哪一種最適合使用?",
+      "options": {
+        "A": "均勻分佈(Uniform distribution)",
+        "B": "指數分佈(Exponential distribution)",
+        "C": "卜瓦松分佈(Poisson distribution)",
+        "D": "常態分佈(Normal distribution)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'C' for question 15"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 卜瓦松分佈描述「單位時間內事件發生次數」,條件:事件獨立、平均發生率固定、機率與時間長度成正比 — 完全符合題目情境。\n\n**其他選項為何錯:**\n- A. 均勻分佈各值機率相等,不適合計數型事件。\n- B. 指數分佈描述「事件間的等待時間」(連續),不是「次數」。\n- C. ✓ 正解\n- D. 常態為連續對稱分佈,描述計數仍偏離本質(雖然 λ 大時可近似)。\n\n**記憶要點:** 計數 → Poisson;間隔時間 → Exponential。"
+    },
+    {
+      "id": "exam-s2-114-2-q16",
+      "topic": "Stats/Descriptive",
+      "question_text": "某金融科技公司以 Z 分數(Z-Score)監控交易金額異常狀況。若交易金額平均為新台幣 2,000 元,標準差為 400 元,某筆交易金額為 3,200 元,且公司以|Z| ≥ 3 判定為異常值(Outlier),下列判斷何者最為正確?",
+      "options": {
+        "A": "該筆交易的 Z 分數為 3,應標記為異常值",
+        "B": "該筆交易的 Z 分數為 2.5,屬於合理變異範圍",
+        "C": "該筆交易的 Z 分數為 2,顯示模型標準差估計過高",
+        "D": "該筆交易的 Z 分數為 1.5,無須納入異常檢測"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'A' for question 16"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** Z = (3200 − 2000) / 400 = 1200 / 400 = 3。依公司規則 |Z| ≥ 3 即視為異常值。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 算錯,正確為 3。\n- C. 算錯,正確為 3。\n- D. 算錯,正確為 3。\n\n**記憶要點:** Z = (X − μ) / σ;直接套公式即可。"
+    },
+    {
+      "id": "exam-s2-114-2-q17",
+      "topic": "FeatureEng",
+      "question_text": "某電商公司欲利用顧客行為資料建立消費預測模型,其中「會員等級」欄位包含「一般、白金、黑卡」三種類別。若模型採用梯度提升樹(Gradient Boosting Tree)演算法,資料科學家在進行特徵編碼時應特別注意下列何種情況?",
+      "options": {
+        "A": "應優先採用獨熱編碼(One-Hot Encoding),以減少類別之間的相依性與記憶體使用量",
+        "B": "直接使用標籤編碼(Label Encoding)可能使模型誤判類別間存在順序關係,導致特徵重要性偏誤",
+        "C": "使用目標編碼(Target Encoding)會自動消除過擬合(Overfitting)風險",
+        "D": "若類別數量較少,建議先使用主成分分析(Principal Component Analysis, PCA)進行降維"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 4,
+        "evidence": "answer column shows 'B' for question 17"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 「一般/白金/黑卡」本身有等級語意,但若直接用 Label Encoding 任意映射為 0/1/2,GBT 會把數值差視為有意義的順序與大小,導致分裂條件與特徵重要性失真。\n\n**其他選項為何錯:**\n- A. One-Hot 不會「減少相依性與記憶體」;反而會增加維度。\n- B. ✓ 正解\n- C. Target Encoding 反而容易過擬合,並非「自動消除」。\n- D. 類別數少不需要 PCA,且 PCA 用於連續變數降維。\n\n**記憶要點:** 樹模型 + 無序類別 → 用 One-Hot 或 Ordinal 明確指定順序,避免 Label 隱含錯誤排序。"
+    },
+    {
+      "id": "exam-s2-114-2-q18",
+      "topic": "BigData/Storage",
+      "question_text": "某人工智慧團隊使用分散式資料庫(Distributed Database)儲存模型訓練資料,並在更新訓練樣本時啟用多節點交易。若其中一個節點在交易過程中發生錯誤,但系統仍確保整體資料不會出現部分更新、最終狀態維持一致,下列何者最能說明此現象?",
+      "options": {
+        "A": "系統透過原子性(Atomicity)確保交易必須全部成功或全部回復(Rollback)",
+        "B": "系統透過一致性(Consistency)確保交易完成後資料符合完整性規則",
+        "C": "系統透過隔離(Isolation)避免多筆交易同時存取或修改相同資料",
+        "D": "系統透過持久性(Durability)確保交易一旦提交,其結果將永久保留於資料庫中"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'A' for question 18"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 題目強調「部分更新不會出現、整體 all-or-nothing」— 這正是原子性(Atomicity)的定義:交易要嘛全部成功提交,要嘛全部回滾。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. Consistency 強調符合完整性約束(如外鍵、唯一性),非「部分成功」議題。\n- C. Isolation 處理並發交易互相干擾的問題。\n- D. Durability 保證提交後即便當機也不會遺失。\n\n**記憶要點:** All-or-nothing = Atomicity。"
+    },
+    {
+      "id": "exam-s2-114-2-q19",
+      "topic": "BigData/Processing",
+      "question_text": "某製造企業導入上萬台物聯網(IoT)感測器以進行設備健康監測。系統需在毫秒級回應異常事件,並同時將完整資料保留於雲端供後續 AI 模型訓練與分析。若企業希望兼顧即時性、資料完整性與可擴展性,下列哪一種資料流程設計最符合此目標?",
+      "options": {
+        "A": "感測器 → 雲端 API Gateway → 分散式資料庫 → 批次特徵工程 → 模型推論",
+        "B": "感測器 → MQTT Broker → 雲端資料倉儲 → 即時儀表板 → 模型再訓練",
+        "C": "感測器 → 邊緣運算節點 → 流式資料處理框架(Stream Processing Framework)→ 雲端資料湖 → 模型推論",
+        "D": "感測器 → 本地快取層 → RESTful API → 雲端報表系統 → 模型批次更新"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'C' for question 19"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 「邊緣運算 + 流式處理 + 資料湖」三者搭配兼顧低延遲(邊緣減少網路 round trip)、即時分析(stream framework 如 Flink/Spark Streaming)與完整原始資料保留(資料湖儲存所有歷史),具備可擴展性。\n\n**其他選項為何錯:**\n- A. 批次特徵工程無法毫秒級回應。\n- B. 資料倉儲偏結構化,且需經 ETL,延遲較高。\n- C. ✓ 正解\n- D. REST 批次更新無法即時。\n\n**記憶要點:** IoT 即時 → Edge + Stream Processing + Data Lake。"
+    },
+    {
+      "id": "exam-s2-114-2-q20",
+      "topic": "Privacy",
+      "question_text": "某銀行計畫將信用風險評估模型部署至雲端平台,以便即時分析客戶交易行為。由於涉及大量敏感金融資料,銀行要求雲端服務商在不解密原始資料的情況下仍能執行模型運算。為達成此目標,最適合採用下列哪一項技術?",
+      "options": {
+        "A": "在上傳資料前進行匿名化(Anonymization),僅保留可識別代碼供比對使用",
+        "B": "利用雜湊(Hash)函數轉換資料,以確保模型可追蹤但無法還原個資",
+        "C": "採用資料本地化(Data Localization)策略,將所有模型訓練限制於內部伺服器中",
+        "D": "透過同態加密(Homomorphic Encryption),讓雲端系統能直接在加密資料上執行運算,解密後結果與原始資料一致"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'D' for question 20"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 題目要求「雲端不解密就能運算」,正是同態加密的核心能力 — 在密文上做加法/乘法,解密後等於明文運算結果。\n\n**其他選項為何錯:**\n- A. 匿名化資料雖去除身分,但雲端仍以「明文」運算。\n- B. Hash 是單向,無法回復,也無法作模型運算的輸入。\n- C. 本地化等於不上雲,不符題目「部署至雲端」。\n- D. ✓ 正解\n\n**記憶要點:** 雲端 + 不解密 + 算 → Homomorphic Encryption。"
+    },
+    {
+      "id": "exam-s2-114-2-q21",
+      "topic": "Viz/Tools",
+      "question_text": "某資料分析師設計在業務績效報告時,希望單一頁面中同時呈現多區域、不同產品線的銷售趨勢變化,並確保主管能在短時間內掌握整體資料走向。若依據 Edward Rolf Tufte 的數據密度(Data Density)原則,下列哪一種設計方式最能符合該概念?",
+      "options": {
+        "A": "將每個區域的銷售資料分成多張獨立折線圖,以避免資訊重疊",
+        "B": "使用顏色區分產品線,於同一圖表中整合多區域趨勢線,保持比例一致且標註清晰",
+        "C": "移除所有輔助線與標籤,僅保留主要折線以凸顯趨勢",
+        "D": "將資料轉換為表格形式,確保數值精確呈現並取代圖表視覺化"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'B' for question 21"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Tufte 的 Data Density 原則強調「在有限版面中傳達盡可能多的有效資訊」,以顏色區分產品線、同圖整合多區域趨勢,正好提高資訊密度且保留比較性。\n\n**其他選項為何錯:**\n- A. 拆成多張小圖反而降低資料密度與比較性。\n- B. ✓ 正解\n- C. 移除標籤會犧牲可讀性,違反「資料-墨水比」原則的另一面向。\n- D. 表格無法快速傳達趨勢,違反高效視覺化目標。\n\n**記憶要點:** Data Density = 在同一個視覺空間中,擠進更多有效資訊。"
+    },
+    {
+      "id": "exam-s2-114-2-q22",
+      "topic": "Viz/Tools",
+      "question_text": "某投資研究員希望分析四檔科技股(A、B、C、D)每日報酬率的變化趨勢,以判斷這些股票之間是否存在高度相關性與共變動性,並評估投資組合分散風險的程度。若研究員希望以單一圖表快速呈現各股票間的關聯強度與方向,下列哪一種視覺化呈現方式最適合?",
+      "options": {
+        "A": "為每檔股票各自繪製直方圖(Histogram)以比較報酬率分佈",
+        "B": "針對任兩股股票繪製散佈圖並加上趨勢線(Regression Line)",
+        "C": "使用雙軸折線圖(Dual-axis Line Chart)同時顯示四檔股價變化",
+        "D": "熱力圖(Heatmap)配合相關係數矩陣(Correlation Matrix)"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'D' for question 22"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 多檔股票兩兩之間的相關性,正是用相關係數矩陣計算 + 熱力圖呈現的典型情境;一張圖即可看出所有配對的強度與正負方向。\n\n**其他選項為何錯:**\n- A. 直方圖只看單一變數的分佈,不顯示兩兩關聯。\n- B. 兩兩散佈圖需要 C(4,2)=6 張圖,不夠精簡。\n- C. 雙軸圖只能比較兩條時間序列。\n- D. ✓ 正解\n\n**記憶要點:** 多變數兩兩相關 → Correlation Heatmap。"
+    },
+    {
+      "id": "exam-s2-114-2-q23",
+      "topic": "Stats/Hypothesis",
+      "question_text": "某研究團隊以單樣本 t 檢定(one-sample t-test)檢驗「新行銷策略後的平均月銷售額是否與原本的 100 萬元不同」,顯著水準設定為 α=0.05。檢定結果顯示:p 值為 0.08,且 95% 信賴區間為 [95 萬元, 108 萬元]。根據上述結果,下列敘述何者正確?",
+      "options": {
+        "A": "因 p 值 < 0.05,可拒絕虛無假設",
+        "B": "若顯著水準改為 0.10,仍不顯著",
+        "C": "因 100 萬元落在信賴區間內,無法拒絕虛無假設",
+        "D": "信賴區間寬度僅與顯著水準有關"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'C' for question 23"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 95% 信賴區間 [95, 108] 包含 100,代表在 α=0.05 下無法拒絕「均值=100」的虛無假設;這與 p=0.08 > 0.05 的結論一致。\n\n**其他選項為何錯:**\n- A. p=0.08 ≥ 0.05,不能拒絕。\n- B. p=0.08 < 0.10,改用 α=0.10 反而會顯著。\n- C. ✓ 正解\n- D. 信賴區間寬度還與樣本變異、樣本數有關,不只顯著水準。\n\n**記憶要點:** 假設值落在 CI 內 ⇔ 對應雙尾檢定不顯著。"
+    },
+    {
+      "id": "exam-s2-114-2-q24",
+      "topic": "BigData/Storage",
+      "question_text": "某企業建置生成式 AI 系統,利用大量客服紀錄與產品評論資料訓練語言模型,以自動生成客服回覆與知識摘要。由於資料來源多樣,且包含非結構化文字、影像與表格資訊,團隊希望在不降低模型效能的前提下,提升資料處理效率與一致性,下列哪一種資料處理策略最適合?",
+      "options": {
+        "A": "建立資料湖(Data Lake)架構,並以 Apache Spark 或 Ray 進行分散式資料預處理與特徵抽取,再串接至模型訓練管線(Pipeline)",
+        "B": "採用單節點高效能伺服器搭配批次處理模式,集中執行資料清理與格式轉換",
+        "C": "將所有文字資料轉換為向量,並以資料庫索引方式直接餵入語言模型訓練",
+        "D": "使用生成式模型先行自動清理資料內容,再將結果輸入至下游訓練流程"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'A' for question 24"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 資料湖適合儲存「異質、非結構化」大量資料;Spark / Ray 提供水平擴展的分散式處理框架,可高效預處理與特徵抽取後串接訓練。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 單節點無法擴展、效率受限。\n- C. 索引並非餵入訓練的方式,且跳過清理步驟。\n- D. 用生成式模型「自動清理」風險高,且不解決規模問題。\n\n**記憶要點:** 異質大資料 → Data Lake + 分散式處理框架(Spark/Ray)。"
+    },
+    {
+      "id": "exam-s2-114-2-q25",
+      "topic": "Viz/Tools",
+      "question_text": "某電商資料團隊繪製顧客單筆消費金額的箱型圖後發現:四分位距(IQR)範圍極小,但上鬚線拉得很長,且在高金額區域有多筆離群值。若希望協助行銷部門依據消費層級設計分群策略,下列哪一種視覺化方式最有助於凸顯不同消費層級間的差異?",
+      "options": {
+        "A": "以對數刻度繪製箱型圖或長條圖,放大高金額消費族群的變化差異",
+        "B": "移除所有離群值,確保資料呈現集中分布",
+        "C": "採用等距分箱(Equal-Width Binning)方式分群",
+        "D": "改以折線圖(Line Chart)觀察時間變化趨勢"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'A' for question 25"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 右偏(長尾)且 IQR 很小的資料,線性刻度會把多數樣本擠在一起、高金額點散布在很遠處;改用對數刻度可均衡視覺空間,凸顯各消費層級的差異。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 移除高金額顧客等於丟失重要分群資訊。\n- C. 等距分箱對長尾分佈會讓多數高頻區擠在第一個箱。\n- D. 折線圖看時間趨勢,與消費分群目的不符。\n\n**記憶要點:** 長尾資料(右偏)→ 對數刻度視覺化。"
+    },
+    {
+      "id": "exam-s2-114-2-q26",
+      "topic": "Analytics/Methods",
+      "question_text": "某串流影音平台運用關聯規則學習(Association Rule Learning)分析用戶的觀影行為,發現若使用者觀看了科幻影集,則有較高機率接著觀看超級英雄電影。分析顯示,同時觀看這兩種類型的使用者約佔全部觀影紀錄的 12%,而觀看科幻影集的使用者中,有 50% 也觀看了超級英雄電影,該規則的提升度(Lift)為 1.8。根據上述資訊,下列哪一項推論最為正確?",
+      "options": {
+        "A": "支持度(Support)過低,代表此規則不具任何商業價值",
+        "B": "提升度(Lift)大於 1 表示兩種類型內容無關,僅屬於隨機重疊",
+        "C": "信賴度(Confidence)為 50%,代表觀看科幻影集者有明顯傾向觀看超級英雄電影",
+        "D": "同時觀看比例僅 12%,代表兩種類型互相排斥"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'C' for question 26"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** Confidence(A→B) = P(B|A) = 50% 表示看了科幻影集的人中,有一半也看了超級英雄電影,顯示明顯傾向。\n\n**其他選項為何錯:**\n- A. 12% support 並不算過低,亦未必無商業價值。\n- B. Lift > 1 表示正相關(超過獨立假設),不是無關。\n- C. ✓ 正解\n- D. 12% 同時觀看 + Lift 1.8,顯示兩類正相關,並非互斥。\n\n**記憶要點:** Support = 同時發生的比例;Confidence = 條件機率;Lift > 1 = 正相關。"
+    },
+    {
+      "id": "exam-s2-114-2-q27",
+      "topic": "BigData/Processing",
+      "question_text": "某金融科技公司分析每日上億筆交易資料,以監控客戶轉帳金額分佈與異常波動。由於資料量極大,為兼顧效率與準確度,團隊決定採用「近似分位數(Approximate Quantile)」方法進行資料摘要統計。下列何者最能正確反映該技術的核心目的?",
+      "options": {
+        "A": "確保每個分位值的結果完全精確,即使計算時間較長",
+        "B": "利用機器學習模型預測分位數位置,以減少統計計算量",
+        "C": "僅能對結構化資料進行批次處理,無法應用於即時資料流",
+        "D": "在可容忍誤差範圍內,快速估算分位值以支援即時分析"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'D' for question 27"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 大規模資料計算精確分位數需排序整體資料,代價高昂;近似分位數演算法(如 t-digest、GK)以「可控誤差」換取「線性時間 + 串流處理」,專為即時/巨量分析設計。\n\n**其他選項為何錯:**\n- A. 完全精確正是近似法所放棄的目標。\n- B. 與機器學習預測無關。\n- C. 近似分位數正是為串流而生。\n- D. ✓ 正解\n\n**記憶要點:** 近似分位數 = 用一點誤差換速度與可擴展性。"
+    },
+    {
+      "id": "exam-s2-114-2-q28",
+      "topic": "Analytics/Methods",
+      "question_text": "若在高維度(>500 維)的資料上應用 DBSCAN(Density-Based Spatial Clustering of Applications with Noise)演算法,卻發現所有資料點皆被判定為雜訊(Noise),下列何者為最有可能的原因?",
+      "options": {
+        "A": "高維下距離變化趨同,導致 ε(Epsilon)閾值選擇失效",
+        "B": "使用錯誤的距離函數(Distance Function)",
+        "C": "MinPts 參數設得太小",
+        "D": "資料過度標準化導致特徵消失"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'A' for question 28"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 維度詛咒(Curse of Dimensionality)使高維空間中所有點對的距離趨於均勻,DBSCAN 賴以判定密度的 ε 閾值幾乎找不到合適值,所有點都成為孤立 → 全被判為雜訊。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 距離函數錯誤通常產生奇怪聚類,而非「全是雜訊」。\n- C. MinPts 太小反而更容易形成核心點,結果應該相反。\n- D. 標準化不會讓特徵消失。\n\n**記憶要點:** 高維 + 密度聚類 → 距離趨同、ε 失效是首要嫌疑;高維可先降維(PCA、UMAP)再用 DBSCAN。"
+    },
+    {
+      "id": "exam-s2-114-2-q29",
+      "topic": "FeatureEng",
+      "question_text": "某團隊在開發風險評估模型時,使用主成分分析(Principal Component Analysis, PCA)進行降維。輸入資料包含三個數值欄位:「交易金額(單位:新台幣)」、「交易次數(次/月)」與「年齡(歲)」,其數值量級分別約為 10⁵、10¹ 與 10²。分析人員直接將原始數據帶入 PCA,結果第一主成分(PC1)幾乎完全由「交易金額」主導。下列哪一項作法或判斷最合理?",
+      "options": {
+        "A": "這是正常現象,金額本身變異較大,應主導主成分",
+        "B": "若改用特徵選擇法,可自動解決變數量級問題",
+        "C": "可刪除「交易金額」欄位以平衡各主成分的影響",
+        "D": "在進行 PCA 前應預先進行標準化(Standardization),以避免因數值尺度差異造成特徵偏誤"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'D' for question 29"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** PCA 是基於變異數的線性投影,變異越大的特徵越主導主成分。若不同特徵量級差異巨大(10⁵ vs 10¹),量級大的會壟斷 PC1。標準化(Z-score)讓每個特徵 std=1 後再做 PCA 才公平。\n\n**其他選項為何錯:**\n- A. 不該由「單位差異」決定主成分,這是偏誤。\n- B. 特徵選擇不解決尺度問題。\n- C. 直接刪除有價值的欄位是錯誤對策。\n- D. ✓ 正解\n\n**記憶要點:** PCA 前一定要標準化;否則大尺度特徵會偷走主成分。"
+    },
+    {
+      "id": "exam-s2-114-2-q30",
+      "topic": "Stats/Regression",
+      "question_text": "某行銷團隊想了解「廣告預算」與「銷售金額」之間的關聯程度。經繪製散佈圖後發現兩者呈明顯線性趨勢,且資料中無明顯離群值(Outliers)。若希望衡量兩者之間線性關係的強度與方向,下列哪一種方法最適合?",
+      "options": {
+        "A": "均方根誤差(Root Mean Squared Error, RMSE)",
+        "B": "共變異數(Covariance)",
+        "C": "皮爾森相關係數(Pearson Correlation Coefficient)",
+        "D": "平均絕對誤差(Mean Absolute Error, MAE)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'C' for question 30"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** Pearson 相關係數 r ∈ [−1, 1] 提供「強度」(絕對值)與「方向」(正負號)兩種資訊,正是衡量線性關係的標準工具。\n\n**其他選項為何錯:**\n- A. RMSE 是預測誤差,非關聯強度。\n- B. Covariance 雖反映方向但其值受單位影響,無法直接判斷強度。\n- C. ✓ 正解\n- D. MAE 同樣是誤差指標。\n\n**記憶要點:** 線性關聯強度+方向 → Pearson r;Covariance 除以兩變數的 std 即得 Pearson。"
+    },
+    {
+      "id": "exam-s2-114-2-q31",
+      "topic": "Stats/Probability",
+      "question_text": "某電商團隊觀察到,每位顧客對廣告推播的點擊行為可視為一次伯努利試驗(Bernoulli Trial),單次點擊成功機率為 p=0.4。當推播對象擴增至 5,000 位顧客時,團隊想快速預估「成功點擊總數」的分佈情形,以進行模型效能模擬與預測。若希望以常態分佈(Normal Distribution)近似原始分佈,下列哪一項判斷最為合理?",
+      "options": {
+        "A": "因樣本數極大,可直接以常態分佈近似二項分佈(Binomial Distribution)",
+        "B": "只有當 np 與 n(1−p) 皆大於 5 時,才能以常態分佈作近似",
+        "C": "常態近似只適用於 p=0.5 的情況",
+        "D": "無論樣本數多大,二項分佈都不能以常態分佈近似"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 8,
+        "evidence": "answer column shows 'B' for question 31"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Binomial → Normal 近似的常見經驗法則(De Moivre–Laplace 定理)要求 np ≥ 5 且 n(1−p) ≥ 5(部分教材用 ≥ 10),避免分佈過於偏斜。\n\n**其他選項為何錯:**\n- A. 樣本數大也要看 p 是否極端(極端時偏態強)。\n- B. ✓ 正解\n- C. p=0.5 對稱性最好,但不是唯一可近似條件。\n- D. 大 n 配合條件成立時可近似。\n\n**記憶要點:** Binomial → Normal 近似條件:np ≥ 5 且 n(1−p) ≥ 5。"
+    },
+    {
+      "id": "exam-s2-114-2-q32",
+      "topic": "Privacy",
+      "question_text": "某電信公司導入生成式 AI 客服系統,利用過去對話紀錄與用戶行為資料訓練語言模型,在資料治理與合規審查過程中,團隊發現模型可能會在回答中生成包含真實姓名、電話或交易資訊的內容。為確保系統符合個資法及生成式 AI 的安全與隱私要求,下列哪一項作法最符合實務可行及法規原則?",
+      "options": {
+        "A": "在訓練資料前進行資料匿名化(Anonymization)或偽匿名化(Pseudonymization)處理,並建立輸出內容稽核機制",
+        "B": "改以強化學習(Reinforcement Learning)微調模型,使模型學會避免產出真實資訊",
+        "C": "採用同態加密(Homomorphic Encryption)以加密所有文字輸入,確保模型無法辨識任何個資",
+        "D": "僅設定模型回覆時不顯示用戶姓名,即可視為隱私防護完成"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'A' for question 32"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 隱私防護的最佳實務是「source 端去識別 + 輸出端稽核」雙層;在訓練前匿名化/偽匿名化可從源頭降低洩漏風險,加上輸出稽核可防範生成幻覺式洩漏。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. RL 無法保證避免洩漏,且需 reward 設計,難以稽核。\n- C. 同態加密用於計算過程的密文運算,不適合語言模型訓練的非結構化文字。\n- D. 只遮姓名不夠,電話、交易資訊仍會洩漏。\n\n**記憶要點:** 隱私 = Source 端去識別 + Output 端稽核,單一層級不足。"
+    },
+    {
+      "id": "exam-s2-114-2-q33",
+      "topic": "Stats/Hypothesis",
+      "question_text": "某金融機構的量化分析師在建立資產風險評估模型時,發現報酬率資料分佈明顯非對稱,且出現多次極端損失事件,使得傳統假設常態分佈的模型無法準確反映真實風險。若希望在不依賴常態分佈假設的前提下,採取更能捕捉資料極端情況的建模策略,下列哪一種方法最為合適?",
+      "options": {
+        "A": "採用線性迴歸模型(Linear Regression Model),以常態分佈殘差(Residuals)為基礎進行推估",
+        "B": "使用平均數(Mean)與標準差(Standard Deviation)估計波動範圍",
+        "C": "將資料裁剪至 ±3σ 範圍內以排除異常值影響",
+        "D": "採用分位數迴歸模型(Quantile Regression Model),聚焦於尾部分位(Tail Quantiles)以評估極端風險"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'D' for question 33"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 分位數迴歸不假設殘差為常態,可針對任意分位(如 0.05、0.95)建模,適合極端尾部風險(如 VaR、CVaR)分析。\n\n**其他選項為何錯:**\n- A. 仍依賴常態殘差假設。\n- B. Mean/Std 在非常態與重尾下無法反映尾部風險。\n- C. 裁剪極端值反而會掩蓋風險。\n- D. ✓ 正解\n\n**記憶要點:** 重尾、不對稱 → Quantile Regression;傳統 OLS 假設殘差常態且同方差。"
+    },
+    {
+      "id": "exam-s2-114-2-q34",
+      "topic": "BigData/Storage",
+      "question_text": "在圖形資料庫(Graph Database)中建模社群平台資料時,若每筆「按讚」行為都包含時間戳記(Timestamp)與裝置類型(Device Type)等資訊。若希望同時保留使用者與貼文之間的互動關係,並能有效查詢「按讚」的行為屬性,下列哪一種設計方式最為合適?",
+      "options": {
+        "A": "將「按讚」視為節點(Node),與使用者建立邊(Edge)",
+        "B": "將「按讚」資訊作為邊的屬性(Property)儲存,連結使用者與被按讚的貼文節點",
+        "C": "把「按讚」資訊直接寫入使用者節點中作為屬性",
+        "D": "建立「按讚紀錄表」並將資料存入關聯式資料庫"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 34"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 圖資料庫的典型建模:使用者 -[LIKED {timestamp, device}]→ 貼文。把「按讚」當邊、把時間/裝置作邊的屬性,既保留關係又支援屬性查詢。\n\n**其他選項為何錯:**\n- A. 將「按讚」做成節點會多一層 hop,查詢與儲存效率較差(雖然可行)。\n- B. ✓ 正解\n- C. 寫入使用者節點失去「按了哪則貼文」的關聯。\n- D. 用 RDBMS 違背使用圖資料庫的初衷。\n\n**記憶要點:** 圖建模:節點 = 實體,邊 = 關係,邊屬性 = 關係的細節。"
+    },
+    {
+      "id": "exam-s2-114-2-q35",
+      "topic": "BigData/Storage",
+      "question_text": "某企業欲建構知識圖譜(Knowledge Graph),以整合內部的研究報告、專利資料與專家知識,並支援語意查詢與關聯推理。若希望模型能具備良好的語意擴展性與高效推理能力,下列哪一種圖模型設計最為合適?",
+      "options": {
+        "A": "僅以節點(Node)與邊(Edge)表示,所有資訊存放於節點屬性中",
+        "B": "將資料結構建為 RDF(Resource Description Framework)三元組(Subject-Predicate-Object)",
+        "C": "使用文件型資料庫儲存內容,並以標籤(Tag)連接節點",
+        "D": "採用關聯式資料庫儲存對應關係,並搭配預建索引加速查詢"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 35"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** RDF 三元組(主語-謂詞-賓語)是知識圖譜的標準資料模型,搭配 OWL/RDFS 等本體論可進行語意推理,且生態工具(SPARQL、Reasoner)成熟。\n\n**其他選項為何錯:**\n- A. 純屬性圖難以做語意推理,擴展性有限。\n- B. ✓ 正解\n- C. 文件型 NoSQL 不適合複雜關聯推理。\n- D. RDBMS join 在多跳關聯查詢上效率差。\n\n**記憶要點:** 知識圖譜的標準資料模型 = RDF 三元組;查詢語言 = SPARQL。"
+    },
+    {
+      "id": "exam-s2-114-2-q36",
+      "topic": "Stats/Regression",
+      "question_text": "某研究人員欲使用線性迴歸模型(Linear Regression Model)分析變數 Y 與 X 之間的關係,但發現 Y 的分佈明顯右偏,且其變異數隨 X 的增大而增加。為滿足模型假設並提升配適效果,下列哪一種前處理方法最為合適?",
+      "options": {
+        "A": "對 X 進行標準化(Standardization)",
+        "B": "對 Y 進行 Box-Cox 轉換(Box-Cox Transformation)",
+        "C": "對資料進行一次差分(First Differencing)",
+        "D": "對 Y 中變異較大的樣本移除"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 9,
+        "evidence": "answer column shows 'B' for question 36"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** Box-Cox 轉換可同時改善「右偏」與「異質變異(heteroscedasticity)」,讓 Y 趨近常態與等變異,正符合 OLS 假設。\n\n**其他選項為何錯:**\n- A. 對 X 標準化不改變 Y 的分佈或變異結構。\n- B. ✓ 正解\n- C. 一次差分用於時間序列趨勢/單根問題,非偏態。\n- D. 移除大變異樣本會丟失資訊且選樣偏誤。\n\n**記憶要點:** 右偏 + 變異隨 X 增大 → Box-Cox(或 log)轉換 Y。"
+    },
+    {
+      "id": "exam-s2-114-2-q37",
+      "topic": "Analytics/Methods",
+      "question_text": "若開發一個用於罕見疾病自動診斷的分類模型,目前資料集中確診樣本僅佔不到 1%,且因為標註成本太高,短期內無法取得更多資料。在此情況下,若希望提升模型對少數類的偵測能力,同時避免過擬合,下列哪一種策略最為合理?",
+      "options": {
+        "A": "對少數類進行隨機過採樣(Random Oversampling)",
+        "B": "對多數類進行欠採樣(Random Undersampling)",
+        "C": "使用 SMOTE(Synthetic Minority Over-sampling Technique)生成合成少數樣本後再訓練分類模型",
+        "D": "僅使用現有資料調整模型決策閾值(Decision Threshold)以提升召回率"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'C' for question 37"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** SMOTE 透過鄰近少數類樣本進行線性插值生成新樣本,既能平衡類別分佈,又比單純複製(Random Oversampling)更不易過擬合。\n\n**其他選項為何錯:**\n- A. 直接複製易過擬合(見 Q12)。\n- B. 在已經樣本不足的情況下,欠採樣多數類會丟失資訊。\n- C. ✓ 正解\n- D. 只調整閾值無法改善模型對少數類特徵的學習。\n\n**記憶要點:** 不平衡資料 + 想避免過擬合 → SMOTE 合成新樣本。"
+    },
+    {
+      "id": "exam-s2-114-2-q38",
+      "topic": "Stats/Hypothesis",
+      "question_text": "一家製造廠評估新生產線推出後,產品良率是否較原生產線提升。工程師分別從兩條生產線各抽樣 100 件產品,原生產線良率為 95%,新生產線為 97%。若欲檢定兩條生產線良率的差異是否具有統計意義,下列哪一種方法最為合適?",
+      "options": {
+        "A": "雙樣本平均數 t 檢定(Two-sample t-test)",
+        "B": "雙比例 Z 檢定(Two-proportion Z-test)",
+        "C": "卡方檢定(Chi-square test)",
+        "D": "變異數分析(ANOVA)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'B' for question 38"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 良率是「比例」(成功/總數),比較兩組比例差異,標準工具是 Two-proportion Z-test(p₁ − p₂ 的 Z 檢定)。\n\n**其他選項為何錯:**\n- A. t-test 用於連續變數的平均數差。\n- B. ✓ 正解\n- C. 卡方檢定處理列聯表獨立性,亦可用於 2×2 表 (與 Z-test 結論相同),但題目要求最合適的「比例差」方法。\n- D. ANOVA 比較三組以上平均數。\n\n**記憶要點:** 兩比例差 → Z-test (Two-proportion);三組以上平均 → ANOVA。"
+    },
+    {
+      "id": "exam-s2-114-2-q39",
+      "topic": "Analytics/Methods",
+      "question_text": "若評估一個新開發的腫瘤分類模型,其資料集中有 80% 的樣本來自良性病例。若直接使用 5-fold 交叉驗證(Cross-Validation)進行模型評估,可能導致模型效能評估出現偏差,為避免此問題,下列哪一種作法最合適?",
+      "options": {
+        "A": "降低 K 值以減少交叉驗證次數",
+        "B": "改為使用拔靴法(Bootstrap)",
+        "C": "調整測試集使良性樣本比例更高,以模擬真實分佈",
+        "D": "使用分層交叉驗證(Stratified K-Fold Cross-Validation),以確保每折類別比例一致"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 10,
+        "evidence": "answer column shows 'D' for question 39"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 在類別不平衡資料上,普通 K-fold 可能讓某折幾乎沒有少數類樣本;Stratified K-Fold 維持每一折的類別比例與整體一致,得到較穩定的效能估計。\n\n**其他選項為何錯:**\n- A. 降 K 值不解決分層問題。\n- B. Bootstrap 也不必然保證類別比例。\n- C. 故意拉高良性比例反而加劇偏差。\n- D. ✓ 正解\n\n**記憶要點:** 不平衡 + CV → Stratified K-Fold。"
+    },
+    {
+      "id": "exam-s2-114-2-q40",
+      "topic": "Analytics/Methods",
+      "question_text": "請參考附圖,下列虛擬程式碼(pseudocode)最可能是在描述何種驗證法?\n\n```\nInput:\n  - data_set: 包含 N 筆資料的資料集\n  - model_training_function: 用來訓練模型的函式\n  - model_evaluation_function: 用來評估模型的函式\nOutput:\n  - 平均評估指標\n\nAlgorithm:\n1. 初始化評估指標列表 metrics = []\n2. 對 i = 1 到 N:\n   a. 將第 i 筆資料作為測試集 test_data\n   b. 將其餘 N-1 筆資料作為訓練集 train_data\n   c. 使用 model_training_function 在 train_data 上訓練模型\n   d. 使用訓練好的模型對 test_data 做預測,計算評估指標 metric_i\n   e. 將 metric_i 加入 metrics\n3. 計算 metrics 的平均值 mean_metric\n4. 回傳 mean_metric\n```",
+      "options": {
+        "A": "Hold-out 驗證(Hold-out Validation)",
+        "B": "留一交叉驗證 LOOCV(Leave-One-Out Cross Validation)",
+        "C": "K-fold 交叉驗證(K-fold Cross Validation)",
+        "D": "拔靴法(Bootstrap)驗證"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 11,
+        "evidence": "answer column shows 'B' for question 40"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 演算法在每次迭代「只抽 1 筆作測試、其餘 N−1 筆訓練」,總共做 N 次 — 這就是 Leave-One-Out Cross Validation(LOOCV)的定義。\n\n**其他選項為何錯:**\n- A. Hold-out 只切一次訓練/測試,不會跑 N 次。\n- B. ✓ 正解\n- C. K-fold 將資料切 K 等份,每次 1 份當測試;K = N 時退化為 LOOCV,但題目以一筆為單位明確說明是 LOOCV。\n- D. Bootstrap 使用有放回抽樣建多組訓練/測試,流程不同。\n\n**記憶要點:** N 筆 → N 次驗證 → LOOCV。"
+    },
+    {
+      "id": "exam-s2-114-2-q41",
+      "topic": "Analytics/Methods",
+      "question_text": "請參考附圖,下列虛擬程式碼(pseudocode)最可能是在描述何種演算法?\n\n```\nInput:\n  - data_points: N 筆資料,每筆資料有 D 個特徵\n  - X: 要分成的群數\nOutput:\n  - clusters: 每筆資料所屬的群編號\n  - centroids: 每個群的中心點\n\nAlgorithm:\n1. 隨機選擇 X 個資料點作為初始中心\n2. 重複以下步驟直到收斂:\n   a. 分群: 對每個資料點,計算它到每個中心的距離,將資料點指派給距離最近的中心\n   b. 更新中心: 對每個群:計算該群中所有資料點的平均值,將群中心更新為這個平均值\n3. 當群中心不再變動時,停止\n```",
+      "options": {
+        "A": "K-means 分群(K-means Clustering)",
+        "B": "高斯混合模型分群(Gaussian Mixture Model Clustering)",
+        "C": "階層式分群(Hierarchical Clustering)",
+        "D": "DBSCAN 分群"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 12,
+        "evidence": "answer column shows 'A' for question 41"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 「隨機初始中心 → 指派最近中心 → 重新計算各群平均作為新中心 → 反覆直到收斂」是 K-means 的標準 Lloyd's 演算法流程。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. GMM 用 EM 演算法估計高斯參數(平均+共變異),不是直接取平均。\n- C. 階層式分群基於距離合併/分裂,不需要事先指定中心。\n- D. DBSCAN 基於密度,不使用中心點。\n\n**記憶要點:** 「指定 K + 平均更新中心」= K-means。"
+    },
+    {
+      "id": "exam-s2-114-2-q42",
+      "topic": "Stats/Probability",
+      "question_text": "考慮某生產線每小時出現瑕疵品的個數符合卜瓦松分佈(Poisson Distribution),已知平均每小時產生 5 個瑕疵品,附圖程式碼展示資料處理,請問下列敘述何者正確?\n\n```python\nimport numpy as np\nfrom scipy.stats import poisson\nlambda_poisson = 5\nprint(poisson.pmf(5, lambda_poisson))\n```",
+      "options": {
+        "A": "lambda_poisson = 5 表示每小時最多 5 個瑕疵品",
+        "B": "poisson.pmf(5, lambda_poisson) 表示小於 5 個瑕疵品的機率",
+        "C": "卜瓦松分佈的適用條件為事件彼此獨立,且平均發生率固定",
+        "D": "poisson.cdf(10, 5) 表示大於或等於 10 個瑕疵品的機率"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 12,
+        "evidence": "answer column shows 'C' for question 42"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** Poisson 分佈三大假設:事件獨立、單位時間內平均發生率 λ 固定、稀有事件;選項 C 正是該條件的標準敘述。\n\n**其他選項為何錯:**\n- A. λ=5 是「平均」每小時 5 個,不是「最多」。\n- B. `pmf(5, λ)` 是「恰好等於 5」的機率,不是「小於 5」。\n- C. ✓ 正解\n- D. `cdf(10, 5)` = P(X ≤ 10),是小於或等於 10 的機率。\n\n**記憶要點:** PMF = 恰好;CDF = 累積到該值(含)。"
+    },
+    {
+      "id": "exam-s2-114-2-q43",
+      "topic": "Analytics/EDA",
+      "question_text": "[此題使用 vgsales.csv 情境]\n\n```python\ndata['Year']\n# 0     2006.0\n# 1     1985.0\n# ...\n# Name: Year, Length: 16598, dtype: float64\n```\n\n分析師在載入資料後,檢視 Year 欄位的資料型態,發現它是 float64,而非一般年份常用的整數。他想了解這樣的情形為什麼會發生。請問下列哪些原因可能導致這種狀況?\n\n原因 A:CSV 檔中 Year 欄位有缺失值(NaN),導致 Pandas 自動將整欄轉為浮點數。\n原因 B:CSV 檔中的年份資料原本是字串(如 \"2006\"),Pandas 轉換時出錯而變成浮點數。\n原因 C:Pandas 預設將所有數值型態讀取為 float64,不論資料是否為整數。\n原因 D:CSV 檔中的年份資料可能包含小數點(例如 2006.0),因此被視為浮點數。",
+      "options": {
+        "A": "原因 B、原因 C",
+        "B": "原因 A、原因 D",
+        "C": "原因 A、原因 B、原因 D",
+        "D": "原因 C、原因 D"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 14,
+        "evidence": "answer column shows 'B' for question 43"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** \n- 原因 A 正確:Pandas 整數型態不支援 NaN,有缺失值會自動升級為 float64。\n- 原因 D 正確:CSV 內若已有 2006.0 這種帶小數點寫法,Pandas 會以 float 讀取。\n- 原因 B 錯誤:字串無法「轉換出錯就變浮點數」,只會留為 object。\n- 原因 C 錯誤:Pandas 預設整數會用 int64,並非全部讀為 float。\n\n**其他選項為何錯:**\n- A. 包含 B,但 B 錯誤。\n- B. ✓ 正解\n- C. 包含 B,B 錯誤。\n- D. 包含 C,C 錯誤。\n\n**記憶要點:** Int 欄位若有 NaN → Pandas 升級為 float64(或使用 Int64 nullable type)。"
+    },
+    {
+      "id": "exam-s2-114-2-q44",
+      "topic": "Analytics/EDA",
+      "question_text": "研究團隊接下來想將 Year 欄位轉換為整數型態,以便後續進行年份趨勢分析。考慮到資料中可能包含缺失值(NaN),請選出最適合的轉換方式。",
+      "options": {
+        "A": "data['Year'] = data['Year'].astype(int);",
+        "B": "data['Year'] = data['Year'].fillna(0).astype(int);",
+        "C": "data['Year'] = data['Year'].fillna(1).astype(int);",
+        "D": "data['Year'] = data['Year'].astype('Int64');"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 14,
+        "evidence": "answer column shows 'D' for question 44"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** Pandas 的 `'Int64'`(大寫 I,Nullable Integer)型態原生支援 NaN,可在不破壞缺失值資訊的情況下轉為整數,適合後續分析。\n\n**其他選項為何錯:**\n- A. `astype(int)` 若欄位含 NaN 會直接報錯。\n- B. `fillna(0)` 把缺失值偽造為 0 年,污染年份分析。\n- C. `fillna(1)` 同理,且 1 年更不合理。\n- D. ✓ 正解\n\n**記憶要點:** 想保留 NaN 的整數欄位 → `astype('Int64')`(注意大寫 I)。"
+    },
+    {
+      "id": "exam-s2-114-2-q45",
+      "topic": "Analytics/EDA",
+      "question_text": "為了觀察各遊戲平台的市場表現,分析師想要統計每個平台的全球銷售總額,並以長條圖呈現。請選出最能正確實現此分析的程式碼。",
+      "options": {
+        "A": "data.groupby(\"Platform\")[\"Global_Sales\"].sum().plot(kind=\"bar\");",
+        "B": "data.groupby(\"Platform\")[\"Global_Sales\"].count().plot(kind=\"bar\");",
+        "C": "data[\"Platform\"].value_counts().plot(kind=\"bar\");",
+        "D": "data.groupby(\"Platform\")[\"Global_Sales\"].mean().plot(kind=\"bar\")"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 14,
+        "evidence": "answer column shows 'A' for question 45"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 「銷售總額」= 對每個平台的 Global_Sales 加總,正確語法為 `groupby('Platform')['Global_Sales'].sum()`。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. `count()` 統計筆數,不是金額加總。\n- C. `value_counts()` 計算各平台遊戲數,不涉及銷售金額。\n- D. `mean()` 是平均,非總額。\n\n**記憶要點:** 總和 → sum;筆數 → count / value_counts;平均 → mean。"
+    },
+    {
+      "id": "exam-s2-114-2-q46",
+      "topic": "Analytics/EDA",
+      "question_text": "團隊希望比較北美、歐洲、日本及其他地區的整體銷售比例,並使用 seaborn 套件以長條圖的形式進行可視化分析。請選出能正確顯示這些地區銷售總額比例的程式碼。",
+      "options": {
+        "A": "sns.countplot(x=[\"NA_Sales\",\"EU_Sales\",\"JP_Sales\",\"Other_Sales\"], data=data);",
+        "B": "sns.lineplot(x=\"Platform\", y=[\"NA_Sales\",\"EU_Sales\",\"JP_Sales\",\"Other_Sales\"], data=data);",
+        "C": "sns.barplot(x=\"variable\", y=\"value\", data=pd.melt(data, value_vars=[\"NA_Sales\",\"EU_Sales\",\"JP_Sales\",\"Other_Sales\"]), estimator=sum);",
+        "D": "sns.histplot(data=data[[\"NA_Sales\",\"EU_Sales\",\"JP_Sales\",\"Other_Sales\"]])"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 15,
+        "evidence": "answer column shows 'C' for question 46"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 多個寬格式銷售欄位需先用 `pd.melt` 轉成長格式(variable/value),再用 `sns.barplot` 搭配 `estimator=sum` 對每個地區加總,即可比較。\n\n**其他選項為何錯:**\n- A. `countplot` 只計次數,且 x 參數不能直接傳欄位名清單。\n- B. `lineplot` 不適合單一時點的比例比較,且 y 不能傳清單。\n- C. ✓ 正解\n- D. `histplot` 顯示分佈而非總和比較。\n\n**記憶要點:** 寬轉長 = `pd.melt`;以總和畫條 → `barplot(estimator=sum)`。"
+    },
+    {
+      "id": "exam-s2-114-2-q47",
+      "topic": "Analytics/EDA",
+      "question_text": "研究團隊想要知道在北美地區(NA)銷售成績最好的遊戲前五名,並希望以 seaborn 的條狀圖呈現結果。請選出能正確完成這項分析的程式碼。",
+      "options": {
+        "A": "sns.barplot(x=\"NA_Sales\", y=\"Name\", data=data.head(5));",
+        "B": "sns.barplot(x=\"Name\", y=\"NA_Sales\", data=data.nlargest(5, \"NA_Sales\"));",
+        "C": "sns.lineplot(x=\"Name\", y=\"NA_Sales\", data=data.nlargest(5, \"NA_Sales\"));",
+        "D": "sns.countplot(x=\"Name\", y=\"NA_Sales\", data=data)"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 15,
+        "evidence": "answer column shows 'B' for question 47"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** `data.nlargest(5, 'NA_Sales')` 取得 NA_Sales 最高的 5 筆,然後 `sns.barplot(x='Name', y='NA_Sales', ...)` 畫條狀圖即可正確呈現前五名。\n\n**其他選項為何錯:**\n- A. `data.head(5)` 是前五筆,不是前五名銷售。\n- B. ✓ 正解\n- C. lineplot 不適合呈現排名比較。\n- D. countplot 統計次數,且不接受 y 參數的數值欄位。\n\n**記憶要點:** Top-K → `nlargest(K, col)`;Bar 比較 → `sns.barplot`。"
+    },
+    {
+      "id": "exam-s2-114-2-q48",
+      "topic": "Analytics/EDA",
+      "question_text": "[使用 marketing.csv,df.describe() 結果已顯示]\n\n根據上述結果,下列何者正確?",
+      "options": {
+        "A": "資料集個數為 199 筆,變數個數為 4 個",
+        "B": "sales 變數的中位數是 16.827",
+        "C": "facebook 變數的第三四分位數(Q3)是 11.94",
+        "D": "youtube 變數的第一四分位數(Q1)是 89.25"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 16,
+        "evidence": "answer column shows 'D' for question 48"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 由 `describe()` 結果,youtube 欄位的 25% (Q1) = 89.25,選項 D 完全對應。\n\n**其他選項為何錯:**\n- A. count 為 200(facebook 含 1 個 NaN 才顯示 199),變數個數含 sales 共 4 個,但「資料集個數」應為 200。\n- B. sales 的中位數(50%)是 15.48;16.827 是 mean。\n- C. facebook 的 Q3 是 43.68;11.94 是 Q1。\n- D. ✓ 正解\n\n**記憶要點:** describe() 的列順序:count, mean, std, min, 25% (Q1), 50% (median), 75% (Q3), max。"
+    },
+    {
+      "id": "exam-s2-114-2-q49",
+      "topic": "Analytics/EDA",
+      "question_text": "參考下圖計算各變數的遺漏值(NaN)個數結果,下列何者正確?\n\n```\nyoutube      0\nfacebook     1\nnewspaper    0\nsales        0\ndtype: int64\n```\n\n選項 A: df.isnull().sum()\n選項 B: df.isNaN().sum()\n選項 C: df.isna().sum()\n選項 D: df.isnan().sum()",
+      "options": {
+        "A": "選項 D",
+        "B": "選項 B、選項 C、選項 D",
+        "C": "選項 A、選項 C",
+        "D": "選項 A、選項 B、選項 C"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 16,
+        "evidence": "answer column shows 'C' for question 49"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** pandas 中正確的缺失值偵測方法只有 `isnull()` 與其別名 `isna()`,兩者完全等價且皆可加 `.sum()` 統計;`isNaN()`、`isnan()` 不是 DataFrame 的方法。\n\n**其他選項為何錯:**\n- A. 包含不存在的 D。\n- B. B 與 D 都不存在。\n- C. ✓ 正解\n- D. 包含不存在的 B。\n\n**記憶要點:** pandas 缺值 → `isnull()` 或 `isna()`;沒有 `isnan / isNaN`(那是 NumPy 的 `np.isnan`)。"
+    },
+    {
+      "id": "exam-s2-114-2-q50",
+      "topic": "Stats/Regression",
+      "question_text": "考慮資料集已經補填遺漏值,參考下圖執行結果(OLS Regression Results: R² = 0.898, F-stat = 573, intercept = 3.5561, youtube coef = 0.0455 p=0, facebook coef = 0.1891 p=0, newspaper coef = -0.0006 p=0.914),下列何者正確?\n\nA:空格1完整語法 reg = LinearRegression().fit(y, X)\nB:空格1完整語法 reg = LinearRegression().fit(X, y)\nC:print(reg.coef_) 結果為包括截距項等 4 個係數值\nD:空格2完整語法 sm.OLS(X2, y).fit()\nE:model_sm 迴歸模型的所有迴歸係數在 α=0.05 之下具有顯著的解釋力\nF:截距項係數值為 3.5561",
+      "options": {
+        "A": "B、C、F",
+        "B": "B、F",
+        "C": "A、C、D、F",
+        "D": "B、E"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "114年第二梯次中級AI應用規劃師第二科大數據處理分析與應用(當次試題公告114_20251226000634.pdf",
+        "page": 17,
+        "evidence": "answer column shows 'B' for question 50"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** \n- B 正確:`fit(X, y)` 是 sklearn 的標準呼叫順序(先特徵後標籤)。\n- F 正確:截距項 const 的 coef = 3.5561,直接從表格讀出。\n- A 錯:`fit(y, X)` 順序顛倒。\n- C 錯:`reg.coef_` 只回傳特徵係數(3 個),截距在 `reg.intercept_`。\n- D 錯:`sm.OLS` 的呼叫是 `sm.OLS(y, X2).fit()`,順序是先 y 後 X。\n- E 錯:newspaper 的 p=0.914 > 0.05,並非「所有係數都顯著」。\n\n**其他選項為何錯:**\n- A. 包含錯誤敘述 C。\n- B. ✓ 正解\n- C. 含 A、D。\n- D. 含錯誤敘述 E。\n\n**記憶要點:** sklearn 順序 `(X, y)`;statsmodels OLS 順序 `(y, X)`,兩者相反 — 常考易錯點。"
+    },
+    {
+      "id": "sample-s2-114-09-q1",
+      "topic": "Stats/Hypothesis",
+      "question_text": "在巨量資料分析班中,共有一年級至四年級,每個年級有 50 個學生,且學生身高呈常態分佈。下列敘述何者不正確?",
+      "options": {
+        "A": "要檢測一年級和二年級的平均身高是否有差異,可以利用 t 檢定",
+        "B": "要檢測一年級、二年級、三年級之間的平均身高是否有差異,可以利用 t 檢定",
+        "C": "要檢測二年級、三年級、四年級之間的平均身高是否有差異,可以利用 F 檢定",
+        "D": "要檢測一年級的平均身高是否等於 170 公分,可以利用卡方檢定"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'D' for question 1"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是錯誤(即為「不正確」的選項,故為正解):** 卡方檢定主要用於「類別變數的獨立性 / 適合度」檢驗,不是用於連續變數的平均數;檢驗單組平均數是否等於某常數應使用單樣本 t 檢定。\n\n**其他選項為何錯(此題找錯誤敘述):**\n- A. 兩組平均比較用 t 檢定,正確。\n- B. 三組以上嚴格說用 ANOVA(F 檢定),但兩兩比較仍可用多次 t-test(附加多重比較校正);敘述未必錯。\n- C. 三組以上平均差異 → F 檢定(ANOVA),正確。\n- D. ✓ 正解(此敘述錯誤)\n\n**記憶要點:** 卡方 → 類別變數;t/F → 連續變數平均數比較。"
+    },
+    {
+      "id": "sample-s2-114-09-q2",
+      "topic": "ROC/AUC",
+      "question_text": "關於接受者操作特徵(ROC)曲線,下列敘述何者正確?",
+      "options": {
+        "A": "ROC 曲線繪製了真陽性率與假陽性率的關係",
+        "B": "ROC 曲線用於評估模型的準確性",
+        "C": "ROC 曲線下的面積(AUC-ROC)始終等於 1",
+        "D": "ROC 曲線只適用於二元分類問題"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'A' for question 2"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** ROC 曲線的縱軸為 TPR(真陽性率/Recall),橫軸為 FPR(假陽性率),展示在不同分類閾值下兩者的 trade-off。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. ROC/AUC 評估的是「排序能力」而非單一準確率(Accuracy)。\n- C. AUC 介於 0~1,完美模型才為 1;隨機猜測為 0.5。\n- D. ROC 可延伸至多類分類(One-vs-Rest)。\n\n**記憶要點:** ROC 軸 = TPR vs FPR;AUC = 曲線下面積。"
+    },
+    {
+      "id": "sample-s2-114-09-q3",
+      "topic": "FeatureEng",
+      "question_text": "下列何者不屬於特徵工程(Feature Engineering)?",
+      "options": {
+        "A": "轉換(Transformation)",
+        "B": "萃取(Extraction)",
+        "C": "挑選(Selection)",
+        "D": "預測(Prediction)"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'D' for question 3"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 預測是模型訓練後輸出階段的工作,不屬於資料準備階段的特徵工程範疇。\n\n**其他選項為何錯:**\n- A. 特徵轉換是常見特徵工程動作。\n- B. 特徵萃取(如 PCA、TF-IDF)屬於特徵工程。\n- C. 特徵選擇屬於特徵工程。\n- D. ✓ 正解\n\n**記憶要點:** 特徵工程 4 大件:Transformation、Extraction、Selection、Construction(Derivation);Prediction 是模型輸出。"
+    },
+    {
+      "id": "sample-s2-114-09-q4",
+      "topic": "Analytics/Methods",
+      "question_text": "拉拉網路商城的老闆擬透過機器學習的方式,利用過往的產品銷售資料,預測下一季的產品銷售數量,以調整現有的庫存水位。下列哪一個類型的模型,比較適合應用在老闆期望的預測目標?",
+      "options": {
+        "A": "決策樹分類器(Decision Tree Classifier)",
+        "B": "K-means 分群(K-means Clustering)",
+        "C": "主成份分析(Principal Component Analysis, PCA)",
+        "D": "線性迴歸(Linear Regression)"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'D' for question 4"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** 預測「下一季銷售數量」是連續數值預測(Regression),最直接的模型即為線性迴歸。\n\n**其他選項為何錯:**\n- A. 決策樹分類器是分類(類別輸出)。\n- B. K-means 是分群(無監督),不做數值預測。\n- C. PCA 是降維工具,不是預測模型。\n- D. ✓ 正解\n\n**記憶要點:** 預測數量(連續值)→ Regression(線性迴歸最基礎)。"
+    },
+    {
+      "id": "sample-s2-114-09-q5",
+      "topic": "FeatureEng",
+      "question_text": "對於低結構化的文本或圖像資料,下列哪一種特徵工程(Feature Engineering)方法最為適用?",
+      "options": {
+        "A": "特徵改善(Feature Improvement)",
+        "B": "特徵建構(Feature Construction)",
+        "C": "特徵學習(Feature Learning)",
+        "D": "特徵選擇(Feature Selection)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'C' for question 5"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 非結構化資料(文字、影像)難以人工定義特徵,Feature Learning(如 word embeddings、CNN 自動學特徵、自監督表示學習)是最適合的方法。\n\n**其他選項為何錯:**\n- A. 特徵改善是修整既有特徵,需先有特徵可改。\n- B. 特徵建構偏向手工從結構化欄位組合新特徵。\n- C. ✓ 正解\n- D. 特徵選擇是從現有特徵中挑子集。\n\n**記憶要點:** 非結構化 → Feature Learning(深度學習自動學特徵)。"
+    },
+    {
+      "id": "sample-s2-114-09-q6",
+      "topic": "FeatureEng",
+      "question_text": "下列哪種方法屬於非監督式學習中的降維技術?",
+      "options": {
+        "A": "K-均值聚類(K-means)",
+        "B": "隨機森林(Random Forest)",
+        "C": "支持向量機(SVM)",
+        "D": "主成分分析(PCA)"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 5,
+        "evidence": "answer column shows 'D' for question 6"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** PCA 是非監督式降維方法的代表,將高維資料投影到主成分構成的低維空間,保留最大變異。\n\n**其他選項為何錯:**\n- A. K-means 是非監督但屬於「分群」,非降維。\n- B. Random Forest 是監督式分類/迴歸。\n- C. SVM 是監督式分類/迴歸。\n- D. ✓ 正解\n\n**記憶要點:** 非監督降維 = PCA、t-SNE、UMAP、Autoencoder。"
+    },
+    {
+      "id": "sample-s2-114-09-q7",
+      "topic": "BigData/Cleaning",
+      "question_text": "異常值偵測使用 IQR(Interquartile Range)法時,下列哪一種範圍外的數值會被視為異常?",
+      "options": {
+        "A": "超過 Q2 ± 2×IQR",
+        "B": "高於 Q1 − IQR 或低於 Q3 + IQR",
+        "C": "高於 Q1 − 2×IQR 或低於 Q3 + 2×IQR",
+        "D": "低於 Q1 − 1.5×IQR 或高於 Q3 + 1.5×IQR"
+      },
+      "correct_answer": "D",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'D' for question 7"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 D 是正解:** Tukey 提出的標準 IQR 異常值法:下界 = Q1 − 1.5×IQR,上界 = Q3 + 1.5×IQR;之外的點即視為 outlier。\n\n**其他選項為何錯:**\n- A. Q2 是中位數,不是 IQR 法的基準。\n- B. 高於下界、低於上界 — 邏輯反了。\n- C. 2×IQR 是極端 outlier(極離群)的判準,非標準異常值。\n- D. ✓ 正解\n\n**記憶要點:** IQR 異常值 = [Q1 − 1.5·IQR, Q3 + 1.5·IQR] 之外。"
+    },
+    {
+      "id": "sample-s2-114-09-q8",
+      "topic": "Privacy",
+      "question_text": "差分隱私(Differential Privacy)在數據應用中的目的為何?",
+      "options": {
+        "A": "添加隨機噪聲掩蓋個體訊息",
+        "B": "加密所有數據",
+        "C": "移除多數類樣本",
+        "D": "提高數據完整性"
+      },
+      "correct_answer": "A",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'A' for question 8"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 A 是正解:** 差分隱私的核心機制是「在統計結果上加入經過調校的隨機噪聲」,使任何單一個體的存在與否不顯著影響輸出,從而保護個人資訊。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 加密是其他隱私技術(如同態加密)的方法。\n- C. 與類別不平衡的取樣方法無關。\n- D. 差分隱私是用於「隱私保護」,並非提高完整性(實際上會故意降低精確度以換隱私)。\n\n**記憶要點:** Differential Privacy = 加雜訊;Homomorphic Encryption = 加密上算。"
+    },
+    {
+      "id": "sample-s2-114-09-q9",
+      "topic": "FeatureEng",
+      "question_text": "若使用主成分分析(PCA)將資料降維至兩個主成分,這表示哪一種情況?",
+      "options": {
+        "A": "僅保留兩筆樣本資料進行模型訓練",
+        "B": "將原始高維資料轉換為兩個主成分表示",
+        "C": "每筆資料僅保留兩個原始欄位的數值",
+        "D": "模型將限制只能用於分類任務"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'B' for question 9"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 降維至 K 個主成分指「將每筆資料投影到 K 個由原始特徵線性組合而成的新軸上」— 樣本數不變、特徵數變成 K。\n\n**其他選項為何錯:**\n- A. PCA 不改變樣本數。\n- B. ✓ 正解\n- C. 並非「保留」兩個原始欄位,而是「組合」出兩個新主成分。\n- D. PCA 後仍可用於分類、迴歸、視覺化等多種任務。\n\n**記憶要點:** PCA 把高維 → 低維新軸,新軸是原特徵的線性組合。"
+    },
+    {
+      "id": "sample-s2-114-09-q10",
+      "topic": "Stats/Descriptive",
+      "question_text": "假設有一組成績資料呈現常態分配,平均數為 70,標準差為 10,若某位學生的成績為 90,該學生的 Z 分數約為多少?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'C' for question 10"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** Z = (X − μ)/σ = (90 − 70)/10 = 2。\n\n**其他選項為何錯:**\n- A. Z = 0 表示恰好等於平均數。\n- B. Z = 1 對應原始值 80。\n- C. ✓ 正解\n- D. Z = 3 對應原始值 100。\n\n**記憶要點:** Z 分數計算就是套公式 (X − μ)/σ。"
+    },
+    {
+      "id": "sample-s2-114-09-q11",
+      "topic": "Privacy",
+      "question_text": "在 AI 倫理治理的背景下,「透明性(Transparency)」通常是指什麼?",
+      "options": {
+        "A": "AI 系統的運算速度公開",
+        "B": "AI 系統僅使用公開數據",
+        "C": "AI 系統決策流程清晰且可解釋",
+        "D": "所有 AI 模型都是開源的"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'C' for question 11"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** AI 倫理中的 Transparency 強調「決策過程可被理解、可被檢視」,包含模型行為的可解釋性(XAI)、資料來源與運算流程的揭露。\n\n**其他選項為何錯:**\n- A. 運算速度與透明性無關。\n- B. 使用公開資料不等於決策過程透明。\n- C. ✓ 正解\n- D. 開源是手段之一,但 Transparency 不要求一定開源。\n\n**記憶要點:** Transparency = 決策過程可被理解;Explainability 是其重要實作。"
+    },
+    {
+      "id": "sample-s2-114-09-q12",
+      "topic": "BigData/Processing",
+      "question_text": "若企業希望即時監控交易異常,應選擇下列哪一類數據處理架構?",
+      "options": {
+        "A": "批次式資料倉儲",
+        "B": "離線式資料湖",
+        "C": "串流處理系統",
+        "D": "冷資料備援架構"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'C' for question 12"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 即時偵測異常需要低延遲、事件驅動的串流處理(Stream Processing)架構,如 Kafka + Flink/Spark Streaming。\n\n**其他選項為何錯:**\n- A. 批次資料倉儲延遲高(小時/天級)。\n- B. 離線資料湖偏儲存,不直接做即時運算。\n- C. ✓ 正解\n- D. 冷資料備援為長期保存用途。\n\n**記憶要點:** 即時 → Stream Processing;批次 → Batch / Warehouse。"
+    },
+    {
+      "id": "sample-s2-114-09-q13",
+      "topic": "Analytics/Methods",
+      "question_text": "為了分析社群網路使用者之間的互動結構,應使用下列哪種分析方法?",
+      "options": {
+        "A": "文字探勘",
+        "B": "主成分分析",
+        "C": "圖論分析",
+        "D": "分群分析"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 6,
+        "evidence": "answer column shows 'C' for question 13"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 社群網路的人際互動本質上是圖結構(節點=人,邊=互動),適合以圖論分析(Graph Analysis、Centrality、Community Detection 等)切入。\n\n**其他選項為何錯:**\n- A. 文字探勘針對的是文本內容。\n- B. PCA 是降維方法。\n- C. ✓ 正解\n- D. 分群分析可作補充,但無法直接表達互動關係。\n\n**記憶要點:** 社群互動結構 → 圖(Graph)+ 圖論演算法。"
+    },
+    {
+      "id": "sample-s2-114-09-q14",
+      "topic": "ML/Basics",
+      "question_text": "為了加速大數據環境下的 AI 模型訓練,以下哪一項為常見技術?",
+      "options": {
+        "A": "早期停止(Early Stopping)",
+        "B": "批次分群(Mini-batching)",
+        "C": "混合精度訓練(Mixed Precision Training)",
+        "D": "主成分分析(PCA)"
+      },
+      "correct_answer": "C",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'C' for question 14"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 C 是正解:** 混合精度訓練(FP16 + FP32)能顯著加速 GPU/TPU 上的訓練速度並減少記憶體用量,是大規模深度學習的標準加速技術。\n\n**其他選項為何錯:**\n- A. Early Stopping 是防止過擬合,不是加速運算本身。\n- B. Mini-batching 是訓練的基本方式而非「加速技術」(此選項中文翻譯也不準確,應是 mini-batch 不是分群)。\n- C. ✓ 正解\n- D. PCA 是特徵降維,主要目的不是訓練加速。\n\n**記憶要點:** Mixed Precision = FP16+FP32 混用,GPU 加速大殺器。"
+    },
+    {
+      "id": "sample-s2-114-09-q15",
+      "topic": "ML/Basics",
+      "question_text": "[此題包含附圖:CIFAR-10 程式碼,x_train.shape = (50000, 32, 32, 3),x_test.shape = (10000, 32, 32, 3),x_train.min()=0,x_train.max()=255] 考慮使用 CIFAR-10 資料集進行資料處理,資料包括 32×32 像素的多筆彩色照片。下列程式碼的資料處理,請選出正確的選項。",
+      "options": {
+        "A": "訓練集(x_train)資料集個數為 100000 筆",
+        "B": "測試集(x_test)資料集個數為 10000 筆",
+        "C": "訓練集(x_train)是 Pandas 資料框(DataFrame)物件",
+        "D": "如果希望將訓練集(x_train)像素值轉換為 [0, 1] 的範圍,則可以輸入:x_train = x_train.astype('int32') / 255.0"
+      },
+      "correct_answer": "B",
+      "source": {
+        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "page": 7,
+        "evidence": "answer column shows 'B' for question 15"
+      },
+      "verified": true,
+      "verification_needed": null,
+      "explanation": "**為什麼 B 是正解:** 由 shape 資訊 (10000, 32, 32, 3) 可知測試集確實有 10,000 筆 32×32 彩色影像。\n\n**其他選項為何錯:**\n- A. 訓練集為 50,000 筆 (shape 第一維是 50000),非 100,000。\n- B. ✓ 正解\n- C. 由 `type(x_train)` 顯示為 `numpy.ndarray`,並非 Pandas DataFrame。\n- D. 想得到 [0,1] 浮點區間,應該轉為 `float32` 後再除以 255.0;轉成 `int32` 後除法會因為整數除法或精度問題出錯。\n\n**記憶要點:** 影像 normalize 通常 `astype('float32') / 255.0`。"
+    }
+  ],
+  "rounds": [],
+  "weak_topics": {}
+}

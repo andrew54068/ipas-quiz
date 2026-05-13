@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Tool symlinks (point to ~/.agents/skills-bullpen/, not portable)
+.claude/
+.agents/
+
+# Sidecar / temp files
+*.tmp
+quiz-pool-combined.json

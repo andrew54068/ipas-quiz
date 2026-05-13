@@ -4,8 +4,8 @@
   "subject_code": "s3",
   "subject_short": "機器學習",
   "source_files": [
-    "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
-    "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf"
+    "subjects/3-ml/past-exam.pdf",
+    "shared/sample-questions.pdf"
   ],
   "verified_question_pool": [
     {
@@ -20,7 +20,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 1,
         "evidence": "answer column shows 'B' for question 1"
       },
@@ -40,7 +40,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 1,
         "evidence": "answer column shows 'C' for question 2"
       },
@@ -60,7 +60,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 1,
         "evidence": "answer column shows 'C' for question 3"
       },
@@ -80,7 +80,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 1,
         "evidence": "answer column shows 'B' for question 4"
       },
@@ -100,7 +100,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 1,
         "evidence": "answer column shows 'A' for question 5"
       },
@@ -120,7 +120,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 2,
         "evidence": "answer column shows 'C' for question 6"
       },
@@ -140,7 +140,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 2,
         "evidence": "answer column shows 'A' for question 7"
       },
@@ -160,7 +160,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 2,
         "evidence": "answer column shows 'D' for question 8"
       },
@@ -180,7 +180,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 2,
         "evidence": "answer column shows 'A' for question 9"
       },
@@ -200,7 +200,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 3,
         "evidence": "answer column shows 'C' for question 10"
       },
@@ -220,7 +220,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 3,
         "evidence": "answer column shows 'D' for question 11"
       },
@@ -240,7 +240,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 3,
         "evidence": "answer column shows 'C' for question 12"
       },
@@ -260,7 +260,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 3,
         "evidence": "answer column shows 'B' for question 13"
       },
@@ -280,7 +280,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 3,
         "evidence": "answer column shows 'C' for question 14"
       },
@@ -300,7 +300,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 4,
         "evidence": "answer column shows 'B' for question 15"
       },
@@ -320,7 +320,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 4,
         "evidence": "answer column shows 'A' for question 16"
       },
@@ -340,7 +340,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 4,
         "evidence": "answer column shows 'B' for question 17"
       },
@@ -360,7 +360,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 4,
         "evidence": "answer column shows 'A' for question 18"
       },
@@ -380,7 +380,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 4,
         "evidence": "answer column shows 'C' for question 19"
       },
@@ -400,7 +400,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 5,
         "evidence": "answer column shows 'C' for question 20"
       },
@@ -420,7 +420,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 5,
         "evidence": "answer column shows 'C' for question 21"
       },
@@ -440,7 +440,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 5,
         "evidence": "answer column shows 'B' for question 22"
       },
@@ -460,7 +460,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 5,
         "evidence": "answer column shows 'A' for question 23"
       },
@@ -480,7 +480,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 6,
         "evidence": "answer column shows 'C' for question 24"
       },
@@ -500,7 +500,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 6,
         "evidence": "answer column shows 'A' for question 25"
       },
@@ -520,7 +520,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 6,
         "evidence": "answer column shows 'D' for question 26"
       },
@@ -540,7 +540,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 6,
         "evidence": "answer column shows 'D' for question 27"
       },
@@ -560,7 +560,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 7,
         "evidence": "answer column shows 'C' for question 28"
       },
@@ -580,7 +580,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 7,
         "evidence": "answer column shows 'D' for question 29"
       },
@@ -600,7 +600,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 7,
         "evidence": "answer column shows 'C' for question 30"
       },
@@ -620,7 +620,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 7,
         "evidence": "answer column shows 'B' for question 31"
       },
@@ -640,7 +640,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 8,
         "evidence": "answer column shows 'D' for question 32"
       },
@@ -660,7 +660,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 8,
         "evidence": "answer column shows 'B' for question 33"
       },
@@ -680,7 +680,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 8,
         "evidence": "answer column shows 'D' for question 34"
       },
@@ -700,7 +700,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 9,
         "evidence": "answer column shows 'A' for question 35"
       },
@@ -720,7 +720,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 9,
         "evidence": "answer column shows 'D' for question 36"
       },
@@ -740,7 +740,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 9,
         "evidence": "answer column shows 'B' for question 37"
       },
@@ -760,7 +760,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 9,
         "evidence": "answer column shows 'B' for question 38"
       },
@@ -780,7 +780,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 9,
         "evidence": "answer column shows 'C' for question 39"
       },
@@ -800,7 +800,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 10,
         "evidence": "answer column shows 'C' for question 40"
       },
@@ -820,7 +820,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 10,
         "evidence": "answer column shows 'D' for question 41"
       },
@@ -840,7 +840,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 11,
         "evidence": "answer column shows 'B' for question 42"
       },
@@ -860,7 +860,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 11,
         "evidence": "answer column shows 'A' for question 43"
       },
@@ -880,7 +880,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 11,
         "evidence": "answer column shows 'D' for question 44"
       },
@@ -900,7 +900,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 13,
         "evidence": "answer column shows 'B' for question 45"
       },
@@ -920,7 +920,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 15,
         "evidence": "answer column shows 'B' for question 46"
       },
@@ -940,7 +940,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 15,
         "evidence": "answer column shows 'B' for question 47"
       },
@@ -960,7 +960,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 17,
         "evidence": "answer column shows 'C' for question 48"
       },
@@ -980,7 +980,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 18,
         "evidence": "answer column shows 'C' for question 49"
       },
@@ -1000,7 +1000,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "114年第二梯次中級AI應用規劃師第三科機器學習技術與應用(當次試題公告114_20251226000650.pdf",
+        "file": "subjects/3-ml/past-exam.pdf",
         "page": 19,
         "evidence": "answer column shows 'C' for question 50"
       },
@@ -1020,7 +1020,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 8,
         "evidence": "answer column shows 'A' for question 1"
       },
@@ -1040,7 +1040,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 8,
         "evidence": "answer column shows 'B' for question 2"
       },
@@ -1060,7 +1060,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 8,
         "evidence": "answer column shows 'B' for question 3"
       },
@@ -1080,7 +1080,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 8,
         "evidence": "answer column shows 'A' for question 4"
       },
@@ -1100,7 +1100,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 8,
         "evidence": "answer column shows 'A' for question 5"
       },
@@ -1120,7 +1120,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 8,
         "evidence": "answer column shows 'C' for question 6"
       },
@@ -1140,7 +1140,7 @@
       },
       "correct_answer": "C",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'C' for question 7"
       },
@@ -1160,7 +1160,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'B' for question 8"
       },
@@ -1180,7 +1180,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'B' for question 9"
       },
@@ -1200,7 +1200,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'B' for question 10"
       },
@@ -1220,7 +1220,7 @@
       },
       "correct_answer": "D",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'D' for question 11"
       },
@@ -1240,7 +1240,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'B' for question 12"
       },
@@ -1260,7 +1260,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 9,
         "evidence": "answer column shows 'A' for question 13"
       },
@@ -1280,7 +1280,7 @@
       },
       "correct_answer": "B",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 10,
         "evidence": "answer column shows 'B' for question 14"
       },
@@ -1300,7 +1300,7 @@
       },
       "correct_answer": "A",
       "source": {
-        "file": "../人工智慧技術應用與規劃/iPAS AI應用規劃師中級能力鑑定-考試樣題(114年9月版) _v2_20251222174110.pdf",
+        "file": "shared/sample-questions.pdf",
         "page": 10,
         "evidence": "answer column shows 'A' for question 15"
       },

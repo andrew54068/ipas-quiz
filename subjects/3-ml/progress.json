@@ -761,13 +761,13 @@
       "correct_answer": "B",
       "source": {
         "file": "subjects/3-ml/past-exam.pdf",
-        "page": 9,
+        "page": 10,
         "evidence": "answer column shows 'B' for question 38"
       },
       "verified": true,
       "verification_needed": null,
       "explanation": "**為什麼 B 是正解:** 程式碼計算 Σ(y_true − y_pred)² / N,正是均方誤差(Mean Squared Error, MSE)的定義。\n\n**其他選項為何錯:**\n- A. MAE 用絕對值 |y_true − y_pred|,不是平方。\n- B. ✓ 正解\n- C. RMSE 是 MSE 再開根號,程式碼沒有 sqrt。\n- D. R² 公式涉及 SSE 與 SST 的比值,結構完全不同。\n\n**記憶要點:** 平方/N → MSE;再開根 → RMSE;絕對值/N → MAE。",
-      "image": "shared/images/exam-s3-114-2-q38-p9.png"
+      "image": "shared/images/exam-s3-114-2-q38-p10.png"
     },
     {
       "id": "exam-s3-114-2-q39",
@@ -782,13 +782,13 @@
       "correct_answer": "C",
       "source": {
         "file": "subjects/3-ml/past-exam.pdf",
-        "page": 9,
+        "page": 10,
         "evidence": "answer column shows 'C' for question 39"
       },
       "verified": true,
       "verification_needed": null,
       "explanation": "**為什麼 C 是正解:** 訓練時隨機產生 0/1 mask(Bernoulli)並乘上輸入,再除以 p(inverted dropout 的縮放補償);測試時直接回傳輸入 — 完全是 Dropout 的標準實作。\n\n**其他選項為何錯:**\n- A. L1 是在 loss 加 |w|,與隨機 mask 無關。\n- B. L2 是在 loss 加 w²,亦無關。\n- C. ✓ 正解\n- D. Batch Norm 是按 batch 標準化激活值,結構完全不同。\n\n**記憶要點:** 隨機關閉神經元 + 訓練/推論不同行為 = Dropout(inverted dropout 除以 p)。",
-      "image": "shared/images/exam-s3-114-2-q39-p9.png"
+      "image": "shared/images/exam-s3-114-2-q39-p10.png"
     },
     {
       "id": "exam-s3-114-2-q40",
@@ -844,13 +844,13 @@
       "correct_answer": "B",
       "source": {
         "file": "subjects/3-ml/past-exam.pdf",
-        "page": 11,
+        "page": 13,
         "evidence": "answer column shows 'B' for question 42"
       },
       "verified": true,
       "verification_needed": null,
       "explanation": "**為什麼 B 是正解:** VGG16 全連接層(尤其第一層 Linear-33 約 1.027 億參數)主導整體 138.36M 參數;卷積層因參數共享反而相對少。\n\n**其他選項為何錯:**\n- A. 卷積層參數量遠小於 FC(基於卷積核大小與通道,而非展平後的維度)。\n- B. ✓ 正解\n- C. ReLU 沒有可學習參數。\n- D. 池化層沒有可學習參數。\n\n**記憶要點:** VGG 系列參數爆炸點 = 第一個 FC(展平後 × 4096);現代設計改用 Global Avg Pool 避開。",
-      "image": "shared/images/exam-s3-114-2-q42-p11.png"
+      "image": "shared/images/exam-s3-114-2-q42-p13.png"
     },
     {
       "id": "exam-s3-114-2-q43",
@@ -885,13 +885,13 @@
       "correct_answer": "D",
       "source": {
         "file": "subjects/3-ml/past-exam.pdf",
-        "page": 11,
+        "page": 13,
         "evidence": "answer column shows 'D' for question 44"
       },
       "verified": true,
       "verification_needed": null,
       "explanation": "**為什麼 D 是正解:** VGG16 標準架構就是 13 conv + 3 FC = 16 個權重層,總參數 ≈ 138.36M,與表底「Total params: 138,357,544」一致。\n\n**其他選項為何錯:**\n- A. 由表中 AdaptiveAvgPool2d 輸出為 [512, 7, 7],所以 FC 輸入 = 512·7·7 = 25088,而非 8192。\n- B. Linear 的參數計算 (in_features+1) × out_features,通常包含 bias;102,764,544 = 25088·4096 + 4096 已含偏差。\n- C. Estimated Total Size 只是前向/反向的記憶體估算,不含 optimizer state 與梯度;實際訓練需要更多。\n- D. ✓ 正解\n\n**記憶要點:** VGG16 = 16 個有權重層(13 conv + 3 FC),params ≈ 138M。",
-      "image": "shared/images/exam-s3-114-2-q44-p11.png"
+      "image": "shared/images/exam-s3-114-2-q44-p13.png"
     },
     {
       "id": "exam-s3-114-2-q45",
@@ -1011,13 +1011,13 @@
       "correct_answer": "C",
       "source": {
         "file": "subjects/3-ml/past-exam.pdf",
-        "page": 19,
+        "page": 18,
         "evidence": "answer column shows 'C' for question 50"
       },
       "verified": true,
       "verification_needed": null,
       "explanation": "**為什麼 C 是正解:** 由附圖可見:訓練損失為「藍實線(b-)」,驗證損失為「紅虛線(r--)」。\n- A 正確:空格 1 = \"b-\"。\n- D 正確:空格 2 = \"r--\"。\n- B 錯誤:Validation 是紅色虛線 \"r--\",不是 \"b--\"。\n- C 錯誤:Training 是藍色實線 \"b-\",不是 \"r-\"。\n- E 錯誤:由圖驗證損失早早平緩,訓練損失反而持續下降更明顯,典型過擬合徵兆。\n\n**其他選項為何錯:**\n- A. 含錯誤 B。\n- B. 含錯誤 C。\n- C. ✓ 正解\n- D. 含錯誤 C 與 E。\n\n**記憶要點:** matplotlib 顏色+樣式:b=blue, r=red;-=solid, --=dashed。",
-      "image": "shared/images/exam-s3-114-2-q50-p19.png"
+      "image": "shared/images/exam-s3-114-2-q50-p18.png"
     },
     {
       "id": "sample-s3-114-09-q1",

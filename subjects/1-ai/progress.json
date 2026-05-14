@@ -1129,7 +1129,7 @@
     {
       "id": "sample-114-09-q7",
       "topic": "CV/Segmentation",
-      "question_text": "[此題包含附圖:(a)(b)(c)(d) 四張電腦視覺技術示意圖,圖片來源:MIT 課程-Object Detection and Segmentation] 附圖中,展示了電腦視覺辨識的幾種技術。請問下列選項中,何者正確配對了圖中(a)、(b)、(c)、(d)所代表的技術名稱?",
+      "question_text": "附圖中,展示了電腦視覺辨識的幾種技術。請問下列選項中,何者正確配對了圖中(a)、(b)、(c)、(d)所代表的技術名稱?",
       "options": {
         "A": "(a)實例分割(Instance Segmentation)/(b)語義分割(Semantic Segmentation)/(c)物件偵測(Object Detection)/(d)圖像分類(Image Classification)",
         "B": "(a)圖像分類(Image Classification)/(b)語義分割(Semantic Segmentation)/(c)物件偵測(Object Detection)/(d)實例分割(Instance Segmentation)",
@@ -1144,7 +1144,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 B 是正解:** 本題為附圖題(四格 CV 任務示意圖)。依電腦視覺四大任務由易到難的標準階層:**圖像分類**(整張圖一個類別) → **語義分割**(每像素類別,同類不分個體) → **物件偵測**(用 bounding box 框出可數物件) → **實例分割**(像素級且區分同類個體),B 選項與此順序最為一致。\n\n**其他選項為何錯:**\n- A. 順序顛倒。\n- B. ✓ 正解\n- C. (b)(c) 順序對調。\n- D. (c)(d) 順序對調。\n\n**記憶要點:** CV 四階層:Classification → Semantic Seg → Detection → Instance Seg。語義「不分個體」、實例「分個體」。"
+      "explanation": "**為什麼 B 是正解:** 本題為附圖題(四格 CV 任務示意圖)。依電腦視覺四大任務由易到難的標準階層:**圖像分類**(整張圖一個類別) → **語義分割**(每像素類別,同類不分個體) → **物件偵測**(用 bounding box 框出可數物件) → **實例分割**(像素級且區分同類個體),B 選項與此順序最為一致。\n\n**其他選項為何錯:**\n- A. 順序顛倒。\n- B. ✓ 正解\n- C. (b)(c) 順序對調。\n- D. (c)(d) 順序對調。\n\n**記憶要點:** CV 四階層:Classification → Semantic Seg → Detection → Instance Seg。語義「不分個體」、實例「分個體」。",
+      "image": "shared/images/cv-tasks-mit.png"
     },
     {
       "id": "sample-114-09-q8",

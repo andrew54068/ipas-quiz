@@ -66,7 +66,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 A 是正解:** 圖中資料的「尾巴」拖向左側(負值方向),屬於左偏(負偏態),Skewness < 0。負偏態時平均數通常 < 中位數 < 眾數。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 右偏(Skewness > 0)時尾巴拉向右,與圖示相反。\n- C. Skewness = 0 表示完全對稱(如常態分佈),此圖明顯不對稱。\n- D. 只要有資料即可計算偏態。\n\n**記憶要點:** 尾巴向哪邊,偏態符號就跟著哪邊;左尾 → 負偏。"
+      "explanation": "**為什麼 A 是正解:** 圖中資料的「尾巴」拖向左側(負值方向),屬於左偏(負偏態),Skewness < 0。負偏態時平均數通常 < 中位數 < 眾數。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. 右偏(Skewness > 0)時尾巴拉向右,與圖示相反。\n- C. Skewness = 0 表示完全對稱(如常態分佈),此圖明顯不對稱。\n- D. 只要有資料即可計算偏態。\n\n**記憶要點:** 尾巴向哪邊,偏態符號就跟著哪邊;左尾 → 負偏。",
+      "image": "shared/images/exam-s2-114-2-q3-p1.png"
     },
     {
       "id": "exam-s2-114-2-q4",
@@ -806,7 +807,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 B 是正解:** 演算法在每次迭代「只抽 1 筆作測試、其餘 N−1 筆訓練」,總共做 N 次 — 這就是 Leave-One-Out Cross Validation(LOOCV)的定義。\n\n**其他選項為何錯:**\n- A. Hold-out 只切一次訓練/測試,不會跑 N 次。\n- B. ✓ 正解\n- C. K-fold 將資料切 K 等份,每次 1 份當測試;K = N 時退化為 LOOCV,但題目以一筆為單位明確說明是 LOOCV。\n- D. Bootstrap 使用有放回抽樣建多組訓練/測試,流程不同。\n\n**記憶要點:** N 筆 → N 次驗證 → LOOCV。"
+      "explanation": "**為什麼 B 是正解:** 演算法在每次迭代「只抽 1 筆作測試、其餘 N−1 筆訓練」,總共做 N 次 — 這就是 Leave-One-Out Cross Validation(LOOCV)的定義。\n\n**其他選項為何錯:**\n- A. Hold-out 只切一次訓練/測試,不會跑 N 次。\n- B. ✓ 正解\n- C. K-fold 將資料切 K 等份,每次 1 份當測試;K = N 時退化為 LOOCV,但題目以一筆為單位明確說明是 LOOCV。\n- D. Bootstrap 使用有放回抽樣建多組訓練/測試,流程不同。\n\n**記憶要點:** N 筆 → N 次驗證 → LOOCV。",
+      "image": "shared/images/exam-s2-114-2-q40-p11.png"
     },
     {
       "id": "exam-s2-114-2-q41",
@@ -826,7 +828,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 A 是正解:** 「隨機初始中心 → 指派最近中心 → 重新計算各群平均作為新中心 → 反覆直到收斂」是 K-means 的標準 Lloyd's 演算法流程。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. GMM 用 EM 演算法估計高斯參數(平均+共變異),不是直接取平均。\n- C. 階層式分群基於距離合併/分裂,不需要事先指定中心。\n- D. DBSCAN 基於密度,不使用中心點。\n\n**記憶要點:** 「指定 K + 平均更新中心」= K-means。"
+      "explanation": "**為什麼 A 是正解:** 「隨機初始中心 → 指派最近中心 → 重新計算各群平均作為新中心 → 反覆直到收斂」是 K-means 的標準 Lloyd's 演算法流程。\n\n**其他選項為何錯:**\n- A. ✓ 正解\n- B. GMM 用 EM 演算法估計高斯參數(平均+共變異),不是直接取平均。\n- C. 階層式分群基於距離合併/分裂,不需要事先指定中心。\n- D. DBSCAN 基於密度,不使用中心點。\n\n**記憶要點:** 「指定 K + 平均更新中心」= K-means。",
+      "image": "shared/images/exam-s2-114-2-q41-p12.png"
     },
     {
       "id": "exam-s2-114-2-q42",
@@ -986,7 +989,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 C 是正解:** pandas 中正確的缺失值偵測方法只有 `isnull()` 與其別名 `isna()`,兩者完全等價且皆可加 `.sum()` 統計;`isNaN()`、`isnan()` 不是 DataFrame 的方法。\n\n**其他選項為何錯:**\n- A. 包含不存在的 D。\n- B. B 與 D 都不存在。\n- C. ✓ 正解\n- D. 包含不存在的 B。\n\n**記憶要點:** pandas 缺值 → `isnull()` 或 `isna()`;沒有 `isnan / isNaN`(那是 NumPy 的 `np.isnan`)。"
+      "explanation": "**為什麼 C 是正解:** pandas 中正確的缺失值偵測方法只有 `isnull()` 與其別名 `isna()`,兩者完全等價且皆可加 `.sum()` 統計;`isNaN()`、`isnan()` 不是 DataFrame 的方法。\n\n**其他選項為何錯:**\n- A. 包含不存在的 D。\n- B. B 與 D 都不存在。\n- C. ✓ 正解\n- D. 包含不存在的 B。\n\n**記憶要點:** pandas 缺值 → `isnull()` 或 `isna()`;沒有 `isnan / isNaN`(那是 NumPy 的 `np.isnan`)。",
+      "image": "shared/images/exam-s2-114-2-q49-p16.png"
     },
     {
       "id": "exam-s2-114-2-q50",
@@ -1006,7 +1010,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 B 是正解:** \n- B 正確:`fit(X, y)` 是 sklearn 的標準呼叫順序(先特徵後標籤)。\n- F 正確:截距項 const 的 coef = 3.5561,直接從表格讀出。\n- A 錯:`fit(y, X)` 順序顛倒。\n- C 錯:`reg.coef_` 只回傳特徵係數(3 個),截距在 `reg.intercept_`。\n- D 錯:`sm.OLS` 的呼叫是 `sm.OLS(y, X2).fit()`,順序是先 y 後 X。\n- E 錯:newspaper 的 p=0.914 > 0.05,並非「所有係數都顯著」。\n\n**其他選項為何錯:**\n- A. 包含錯誤敘述 C。\n- B. ✓ 正解\n- C. 含 A、D。\n- D. 含錯誤敘述 E。\n\n**記憶要點:** sklearn 順序 `(X, y)`;statsmodels OLS 順序 `(y, X)`,兩者相反 — 常考易錯點。"
+      "explanation": "**為什麼 B 是正解:** \n- B 正確:`fit(X, y)` 是 sklearn 的標準呼叫順序(先特徵後標籤)。\n- F 正確:截距項 const 的 coef = 3.5561,直接從表格讀出。\n- A 錯:`fit(y, X)` 順序顛倒。\n- C 錯:`reg.coef_` 只回傳特徵係數(3 個),截距在 `reg.intercept_`。\n- D 錯:`sm.OLS` 的呼叫是 `sm.OLS(y, X2).fit()`,順序是先 y 後 X。\n- E 錯:newspaper 的 p=0.914 > 0.05,並非「所有係數都顯著」。\n\n**其他選項為何錯:**\n- A. 包含錯誤敘述 C。\n- B. ✓ 正解\n- C. 含 A、D。\n- D. 含錯誤敘述 E。\n\n**記憶要點:** sklearn 順序 `(X, y)`;statsmodels OLS 順序 `(y, X)`,兩者相反 — 常考易錯點。",
+      "image": "shared/images/exam-s2-114-2-q50-p17.png"
     },
     {
       "id": "sample-s2-114-09-q1",
@@ -1306,7 +1311,8 @@
       },
       "verified": true,
       "verification_needed": null,
-      "explanation": "**為什麼 B 是正解:** 由 shape 資訊 (10000, 32, 32, 3) 可知測試集確實有 10,000 筆 32×32 彩色影像。\n\n**其他選項為何錯:**\n- A. 訓練集為 50,000 筆 (shape 第一維是 50000),非 100,000。\n- B. ✓ 正解\n- C. 由 `type(x_train)` 顯示為 `numpy.ndarray`,並非 Pandas DataFrame。\n- D. 想得到 [0,1] 浮點區間,應該轉為 `float32` 後再除以 255.0;轉成 `int32` 後除法會因為整數除法或精度問題出錯。\n\n**記憶要點:** 影像 normalize 通常 `astype('float32') / 255.0`。"
+      "explanation": "**為什麼 B 是正解:** 由 shape 資訊 (10000, 32, 32, 3) 可知測試集確實有 10,000 筆 32×32 彩色影像。\n\n**其他選項為何錯:**\n- A. 訓練集為 50,000 筆 (shape 第一維是 50000),非 100,000。\n- B. ✓ 正解\n- C. 由 `type(x_train)` 顯示為 `numpy.ndarray`,並非 Pandas DataFrame。\n- D. 想得到 [0,1] 浮點區間,應該轉為 `float32` 後再除以 255.0;轉成 `int32` 後除法會因為整數除法或精度問題出錯。\n\n**記憶要點:** 影像 normalize 通常 `astype('float32') / 255.0`。",
+      "image": "shared/images/sample-s2-114-09-q15-p7.png"
     }
   ],
   "rounds": [],
